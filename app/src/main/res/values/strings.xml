@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">bGo Driver</string>
+
+
+    <string name="next">Next</string>
+    <string name="otp_text">OTP Verification</string>
+    <string name="bgo_text">B-Go</string>
+
+
+</resources>
