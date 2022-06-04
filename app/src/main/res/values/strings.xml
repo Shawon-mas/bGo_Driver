@@ -5,6 +5,11 @@
     <string name="next">Next</string>
     <string name="otp_text">OTP Verification</string>
     <string name="bgo_text">B-Go</string>
+    <string name="welcome_text">Welcome to</string>
+    <string name="toc">By logging in, you agree to the termsuse of</string>
+    <string name="otp_send">Enter the 5 digit number that we sent to your given mobile number</string>
+    <string name="didntreceived_otp">Didn’t receive any OTP number !</string>
+    <string name="resend">Resend code again.</string>
 
 
 </resources>

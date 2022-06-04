@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_logo"/>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/bGo_textColorPrimary"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_24ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_text"/>
+        <TextView
+
+            android:textColor="@color/bGo_textColorSecondary"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_20ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bgo_text"/>
+         <FrameLayout
+             android:layout_marginTop="@dimen/_40sdp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <EditText
+                 android:id="@+id/login_phoneEditText"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40sdp"
+                 android:background="@drawable/input_bg"
+                 android:fontFamily="@font/sf_ui_display"
+                 android:hint="Enter your mobile number"
+                 android:imeOptions="actionNext"
+                 android:importantForAutofill="no"
+                 android:inputType="number"
+                 android:maxLines="1"
+                 android:drawableLeft="@drawable/ic_bd_flag"
+                 android:drawablePadding="@dimen/_20sdp"
+                 android:padding="@dimen/_10sdp"
+                 android:textColor="#000"
+                 android:textSize="@dimen/_13ssp" />
+             <com.google.android.material.progressindicator.CircularProgressIndicator
+                 android:id="@+id/loginIndicator"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:indeterminate="true"
+                 android:layout_gravity="end|center_vertical"
+                 android:visibility="invisible" />
+         </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_loginButton"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:backgroundTint="@color/bGo_mainColor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_14ssp"
+            app:cornerRadius="@dimen/_5sdp"/>
+        <TextView
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/bGo_textColorSecondary"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toc"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bgo_text"/>
+            <TextView
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/bGo_textColorSecondary"
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="and data policy users."/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+<!--
+
+    By logging in, you agree to the termsuse of
+    B-Go and data policy users.-->
