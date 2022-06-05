@@ -48,11 +48,11 @@ public class OtpActivity extends AppCompatActivity {
                     String userOtp=getIntent().getStringExtra("userOtp");
                     if (getOtp.equals(userOtp))
                     {
-                        Toast.makeText(getApplicationContext(), "Verified",  Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "User verified",  Toast.LENGTH_SHORT).show();
                         goToNext();
 
                     }else {
-                        Toast.makeText(getApplicationContext(), "Not Verify",  Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "User not verify",  Toast.LENGTH_SHORT).show();
                     }
                 }
 
