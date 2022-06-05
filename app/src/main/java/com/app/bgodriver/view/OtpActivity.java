@@ -2,6 +2,7 @@ package com.app.bgodriver.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import com.app.bgodriver.R;
 import com.app.bgodriver.databinding.ActivityLoginBinding;
 import com.app.bgodriver.databinding.ActivityOtpBinding;
+import com.app.bgodriver.view.driverProfileUi.InitProfileActivity;
 
 import in.aabhasjindal.otptextview.OTPListener;
 
@@ -60,8 +62,9 @@ public class OtpActivity extends AppCompatActivity {
         });
     }
 
-    private void goToNext() {
-
+    private void goToNext()
+    {
+            startActivity(new Intent(getApplicationContext(), InitProfileActivity.class));
     }
 }
 /*

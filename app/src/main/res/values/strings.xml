@@ -10,6 +10,15 @@
     <string name="otp_send">Enter the 5 digit number that we sent to your given mobile number</string>
     <string name="didntreceived_otp">Didn’t receive any OTP number !</string>
     <string name="resend">Resend code again.</string>
+    <string name="welcome2">Welcome to bGo</string>
+    <string name="tips1"><![CDATA[Complete the following simple steps to get verified & get trips.]]></string>
+    <string name="step1">Step 01</string>
+    <string name="step2">Step 02</string>
+    <string name="profile_text">Please complete your profile and give your infomation for verification.</string>
+    <string name="profile_text2">Please add your vehicle details and put all infomation for verification.</string>
+    <string name="verified">Get Verified</string>
+    <string name="how_it_works">See how it works</string>
+    <string name="contact_us">Contact us directly</string>
 
 
 </resources>
