@@ -36,9 +36,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-              //  binding.loginIndicator.setVisibility(View.VISIBLE);
+                binding.loginIndicator.setVisibility(View.VISIBLE);
                 validation();
-
                 sendOtp();
             }
         });
@@ -66,13 +65,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<DataResponse> call, Response<DataResponse> response) {
                 if(response.isSuccessful())
                 {
-                  //  binding.loginIndicator.setVisibility(View.INVISIBLE);
+                    binding.loginIndicator.setVisibility(View.INVISIBLE);
                     DataResponse dataResponse=response.body();
                     String message=dataResponse.getMessage();
                     Intent intent=new Intent(getApplicationContext(),OtpActivity.class);
+                    intent.putExtra("userOtp",dataResponse.getOtp());
                     startActivity(intent);
-                    finish();
                     Toast.makeText(getApplicationContext(),message ,Toast.LENGTH_LONG).show();
+                    Log.d("Otp:",dataResponse.getOtp());
 
                 }
             }
@@ -80,6 +80,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<DataResponse> call, Throwable t)
             {
+                binding.loginIndicator.setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(),"Something Went Wrong" ,Toast.LENGTH_LONG).show();
                 Log.d("Message:",t.getMessage());
             }
         });
