@@ -3,7 +3,9 @@ package com.app.bgodriver.view.driverProfileUi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.app.bgodriver.R;
@@ -18,6 +20,7 @@ public class InitProfileActivity extends AppCompatActivity {
     private ActivityInitProfileBinding binding;
     private TutorialAdapter adapter;
     private ArrayList<TutorialModel> modelArrayList;
+    int count=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class InitProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                count++;
+                Log.d("tap:",String.valueOf(count));
+
                 goToProfileActivity();
             }
         });
@@ -46,11 +52,11 @@ public class InitProfileActivity extends AppCompatActivity {
 
     private void goToVehicleActivity()
     {
-
     }
 
     private void goToProfileActivity()
     {
+        startActivity(new Intent(getApplicationContext(),PersonalInfoActivity.class));
 
     }
 

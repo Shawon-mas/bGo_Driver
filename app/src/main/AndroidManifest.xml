@@ -17,7 +17,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".PersonalInfoActivity"
+            android:name=".view.driverProfileUi.PersonalInfoActivity"
             android:exported="false" />
         <activity
             android:name=".view.driverProfileUi.InitProfileActivity"
