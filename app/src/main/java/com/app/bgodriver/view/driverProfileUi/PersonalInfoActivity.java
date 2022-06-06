@@ -3,20 +3,24 @@ package com.app.bgodriver.view.driverProfileUi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.app.bgodriver.R;
-import com.app.bgodriver.databinding.ActivityOtpBinding;
 import com.app.bgodriver.databinding.ActivityPersonalInfoBinding;
+import com.app.bgodriver.model.FragmentToActivity;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
 
-public class PersonalInfoActivity extends AppCompatActivity {
+public class PersonalInfoActivity extends AppCompatActivity implements FragmentToActivity {
     private ActivityPersonalInfoBinding binding;
     int Id;
 
@@ -25,10 +29,20 @@ public class PersonalInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPersonalInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        initView();
         stepViewImplement();
     }
 
+    private void initView() {
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.container,new Step1());
+        fragmentTransaction.addToBackStack(null)
+                .commit();
+    }
+
     private void stepViewImplement() {
+
         binding.stepView.getState()
                 .selectedTextColor(ContextCompat.getColor(this, R.color.bGo_textColorPrimary))
                 .animationType(StepView.ANIMATION_CIRCLE)
@@ -55,20 +69,75 @@ public class PersonalInfoActivity extends AppCompatActivity {
 
                  if (id==0)
                  {
+                     /*TextView textView=findViewById(R.id.t1);
+                     textView.setVisibility(View.GONE);*/
+                     FrameLayout frameLayout=findViewById(R.id.frameLayout1);
+                     frameLayout.setVisibility(View.GONE);
+
                      binding.stepView.go(id+1,true);
+
                      Toast.makeText(getApplicationContext(), "This is nid",  Toast.LENGTH_SHORT).show();
+
+                     FragmentManager fragmentManager=getSupportFragmentManager();
+                     FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+                     fragmentTransaction.add(R.id.container,new Step2());
+                     fragmentTransaction.commit();
 
                      Id=id+1;
                  }else if (Id==1)
                  {
+                     FrameLayout frameLayout=findViewById(R.id.frameLayout2);
+                     frameLayout.setVisibility(View.GONE);
+
                      binding.stepView.go(id+1,true);
                      Toast.makeText(getApplicationContext(), "This is selfie",  Toast.LENGTH_SHORT).show();
+
+                     FragmentManager fragmentManager=getSupportFragmentManager();
+                     FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+                     fragmentTransaction.add(R.id.container,new Step3());
+                     fragmentTransaction.commit();
                      binding.next.setText("Complete");
+                     binding.stepView.done(true);
+
                  }
 
 
              }
          });
+         binding.backButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 int id=binding.stepView.getCurrentStep();
+                 if (id==0)
+                 {
+                     startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
+                     Id=id+1;
+                 }else if (id==1)
+                 {
+                     FrameLayout frameLayout=findViewById(R.id.frameLayout2);
+                     frameLayout.setVisibility(View.GONE);
+                     FrameLayout frameLayout1=findViewById(R.id.frameLayout1);
+                     frameLayout1.setVisibility(View.VISIBLE);
+                     binding.next.setText("Next");
+                     binding.stepView.go(id-1,true);
+                     Id=id+1;
+                 }else if (id==2){
+                     FrameLayout frameLayout=findViewById(R.id.frameLayout3);
+                     frameLayout.setVisibility(View.GONE);
+                     FrameLayout frameLayout2=findViewById(R.id.frameLayout2);
+                     frameLayout2.setVisibility(View.VISIBLE);
+                     binding.next.setText("Next");
+                     binding.stepView.go(id-1,true);
+                 }
+
+             }
+         });
+    }
+
+    @Override
+    public void communicate(String comm,String name) {
+        Log.d("received", comm+"\n"+name);
+
     }
 }
 /*

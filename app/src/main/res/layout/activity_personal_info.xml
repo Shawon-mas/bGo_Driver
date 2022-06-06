@@ -6,38 +6,69 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".view.driverProfileUi.PersonalInfoActivity">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <ImageButton
+
+            android:backgroundTintMode="screen"
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"/>
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Profile"
+            android:textSize="@dimen/_20ssp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textColor="@color/black"
+           />
+
+    </LinearLayout>
+
     <com.shuhart.stepview.StepView
+        android:layout_below="@id/layout1"
         android:id="@+id/step_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        app:sv_selectedCircleColor="@color/bGo_mainColor"
-        app:sv_selectedTextColor="@color/white"
-        app:sv_stepLineWidth="1dp"
-        app:sv_stepPadding="4dp"
-        app:sv_nextTextColor="@color/bGo_textColorSecondary"
-        app:sv_nextStepLineColor="@color/bGo_textColorSecondary"
         app:sv_doneCircleColor="@color/bGo_mainColor"
-        app:sv_doneStepLineColor="@color/bGo_textColorSecondary"
-        app:sv_doneTextColor="@color/bGo_textColorSecondary"
         app:sv_doneCircleRadius="12dp"
+        app:sv_doneStepLineColor="@color/bGo_textColorSecondary"
+        app:sv_doneStepMarkColor="@color/white"
+        app:sv_doneTextColor="@color/bGo_textColorSecondary"
+        app:sv_nextStepLineColor="@color/bGo_textColorSecondary"
+        app:sv_nextTextColor="@color/bGo_textColorSecondary"
+        app:sv_selectedCircleColor="@color/bGo_mainColor"
         app:sv_selectedCircleRadius="12dp"
         app:sv_selectedStepNumberColor="@color/bGo_textColorSecondary"
-        app:sv_stepViewStyle="@style/StepView"
-        app:sv_doneStepMarkColor="@color/white"
+        app:sv_selectedTextColor="@color/white"
+        app:sv_stepLineWidth="1dp"
         app:sv_stepNumberTextSize="5sp"
-        app:sv_typeface="@font/sf_ui_display"/>
+        app:sv_stepPadding="4dp"
+        app:sv_stepViewStyle="@style/StepView"
+        app:sv_typeface="@font/sf_ui_display" />
+     <FrameLayout
+         android:id="@+id/container"
+         android:layout_below="@id/step_view"
+         android:layout_above="@id/next"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/next"
-            android:text="Next"
-            android:backgroundTint="@color/bGo_mainColor"
-           android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"/>
-
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        app:cornerRadius="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:backgroundTint="@color/bGo_mainColor"
+        android:text="Next" />
 
 
 </RelativeLayout>

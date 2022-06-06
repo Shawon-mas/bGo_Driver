@@ -19,6 +19,15 @@
     <string name="verified">Get Verified</string>
     <string name="how_it_works">See how it works</string>
     <string name="contact_us">Contact us directly</string>
+    <string name="profile"></string>
+
+    <string-array name="drive_info">
+        <item>Select type</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

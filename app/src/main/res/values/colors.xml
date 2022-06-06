@@ -16,6 +16,7 @@
     <color name="bGo_extraColor">#F56363</color>
     <color name="bGo_inputBg">#F1F2F3</color>
     <color name="bGo_textColorProfile">#595F7D</color>
+    <color name="bGo_inputBoxTextColor">#595F7D</color>
 
 
 

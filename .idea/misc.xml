@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/input.xml" value="0.1395" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/input_bg.xml" value="0.148" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/input_box.xml" value="0.148" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_home.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_init_profile.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_login.xml" value="0.22" />
@@ -11,6 +13,11 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_otp.xml" value="0.14" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_personal_info.xml" value="0.2" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_splash.xml" value="0.17" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_test.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/custom_spinner.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step1.xml" value="0.22" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step2.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step3.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/tutorial_layout.xml" value="0.22" />
       </map>
     </option>
