@@ -3,6 +3,7 @@ package com.app.bgodriver.view.driverProfileUi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -16,6 +17,9 @@ import android.widget.Toast;
 import com.app.bgodriver.R;
 import com.app.bgodriver.databinding.ActivityPersonalInfoBinding;
 import com.app.bgodriver.model.FragmentToActivity;
+import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
+import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
+import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -36,7 +40,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     private void initView() {
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new Step1());
+        fragmentTransaction.add(R.id.container,new General_Info());
         fragmentTransaction.addToBackStack(null)
                 .commit();
     }
@@ -67,21 +71,22 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
              {
                  int id=binding.stepView.getCurrentStep();
 
+
+
                  if (id==0)
                  {
-                     /*TextView textView=findViewById(R.id.t1);
-                     textView.setVisibility(View.GONE);*/
+
                      FrameLayout frameLayout=findViewById(R.id.frameLayout1);
                      frameLayout.setVisibility(View.GONE);
 
                      binding.stepView.go(id+1,true);
-
                      Toast.makeText(getApplicationContext(), "This is nid",  Toast.LENGTH_SHORT).show();
 
                      FragmentManager fragmentManager=getSupportFragmentManager();
                      FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-                     fragmentTransaction.add(R.id.container,new Step2());
-                     fragmentTransaction.commit();
+                     fragmentTransaction.add(R.id.container,new Nid_Info());
+                     fragmentTransaction.addToBackStack(null)
+                             .commit();
 
                      Id=id+1;
                  }else if (Id==1)
@@ -94,8 +99,9 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
 
                      FragmentManager fragmentManager=getSupportFragmentManager();
                      FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-                     fragmentTransaction.add(R.id.container,new Step3());
-                     fragmentTransaction.commit();
+                     fragmentTransaction.add(R.id.container,new Selfie_Info());
+                     fragmentTransaction.addToBackStack(null)
+                             .commit();
                      binding.next.setText("Complete");
                      binding.stepView.done(true);
 
@@ -116,16 +122,20 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                  {
                      FrameLayout frameLayout=findViewById(R.id.frameLayout2);
                      frameLayout.setVisibility(View.GONE);
+
                      FrameLayout frameLayout1=findViewById(R.id.frameLayout1);
                      frameLayout1.setVisibility(View.VISIBLE);
+
                      binding.next.setText("Next");
                      binding.stepView.go(id-1,true);
                      Id=id+1;
                  }else if (id==2){
                      FrameLayout frameLayout=findViewById(R.id.frameLayout3);
                      frameLayout.setVisibility(View.GONE);
+
                      FrameLayout frameLayout2=findViewById(R.id.frameLayout2);
                      frameLayout2.setVisibility(View.VISIBLE);
+
                      binding.next.setText("Next");
                      binding.stepView.go(id-1,true);
                  }
@@ -137,6 +147,13 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     @Override
     public void communicate(String comm,String name) {
         Log.d("received", comm+"\n"+name);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
 
     }
 }

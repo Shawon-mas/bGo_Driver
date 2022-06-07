@@ -1,9 +1,12 @@
 package com.app.bgodriver.view.driverProfileUi;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +16,7 @@ import com.app.bgodriver.adapter.TutorialAdapter;
 import com.app.bgodriver.databinding.ActivityInitProfileBinding;
 import com.app.bgodriver.databinding.ActivityOtpBinding;
 import com.app.bgodriver.model.TutorialModel;
+import com.github.dhaval2404.imagepicker.ImagePicker;
 
 import java.util.ArrayList;
 
@@ -52,6 +56,12 @@ public class InitProfileActivity extends AppCompatActivity {
 
     private void goToVehicleActivity()
     {
+        ImagePicker.with(this)
+                .crop()
+                .cropSquare()
+                .compress(1024)
+                .start();
+
     }
 
     private void goToProfileActivity()
@@ -69,6 +79,21 @@ public class InitProfileActivity extends AppCompatActivity {
         modelArrayList.add(new TutorialModel("How to start your bidding process"));
         adapter=new TutorialAdapter(getApplicationContext(),modelArrayList);
         binding.howItWorksRecyclerview.setAdapter(adapter);
+
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode== Activity.RESULT_OK)
+        {
+            if (data!=null){
+                Uri uri=data.getData();
+                binding.check.setImageURI(uri);
+                binding.check.invalidate();
+                Log.d("uri:",String.valueOf(uri));
+            }
+
+        }
 
     }
 }

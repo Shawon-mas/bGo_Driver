@@ -15,9 +15,10 @@
     <color name="bGo_textColorSecondary">#A6AAB9</color>
     <color name="bGo_extraColor">#F56363</color>
     <color name="bGo_inputBg">#F1F2F3</color>
+    <color name="bGo_imageBg">#C4C4C4</color>
     <color name="bGo_textColorProfile">#595F7D</color>
     <color name="bGo_inputBoxTextColor">#595F7D</color>
-
+    <color name="bGo_black">#000000</color>
 
 
 </resources>

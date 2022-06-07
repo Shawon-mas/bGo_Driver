@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayout2"
+    tools:context=".view.driverProfileUi.driverProfileFragment.Nid_Info">
+
+    <!-- TODO: Update blank fragment layout -->
+     <LinearLayout
+         android:orientation="vertical"
+         android:gravity="center_vertical"
+         android:padding="@dimen/_20sdp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/nid"
+             android:textSize="@dimen/_15ssp"
+             android:fontFamily="@font/sf_ui_display_medium"
+             android:textColor="@color/black"
+             android:layout_gravity="start"/>
+         <LinearLayout
+
+             android:layout_marginTop="@dimen/_10sdp"
+             android:weightSum="2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <com.google.android.material.card.MaterialCardView
+                 app:cardCornerRadius="@dimen/_5sdp"
+                 app:cardBackgroundColor="@color/bGo_bgColor"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="@dimen/_85sdp">
+                 <LinearLayout
+                     android:orientation="vertical"
+                     android:gravity="center|center_horizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:visibility="gone"
+                         android:id="@+id/fontNidImage"/>
+                     <ImageView
+                         android:id="@+id/nidFrontImage"
+                         app:tint="@color/bGo_imageBg"
+                         android:layout_width="@dimen/_50sdp"
+                         android:layout_height="@dimen/_50sdp"
+                         android:src="@drawable/add_photo"/>
+                     <TextView
+                         android:id="@+id/textFornt"
+                         android:textColor="@color/bGo_black"
+                         android:fontFamily="@font/sf_ui_display"
+                         android:textSize="@dimen/_12ssp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Front card"/>
+
+                 </LinearLayout>
+
+             </com.google.android.material.card.MaterialCardView>
+             <com.google.android.material.card.MaterialCardView
+                 app:cardCornerRadius="@dimen/_5sdp"
+                 app:cardBackgroundColor="@color/bGo_bgColor"
+                 android:layout_marginLeft="@dimen/_10sdp"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="@dimen/_85sdp">
+                 <LinearLayout
+                     android:orientation="vertical"
+                     android:gravity="center|center_horizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:visibility="gone"
+                         android:id="@+id/backNidImage"/>
+                     <ImageView
+                         android:id="@+id/nidBackImage"
+                         app:tint="@color/bGo_imageBg"
+                         android:layout_width="@dimen/_50sdp"
+                         android:layout_height="@dimen/_50sdp"
+                         android:src="@drawable/add_photo"/>
+                     <TextView
+                         android:id="@+id/textFornt2"
+                         android:textColor="@color/bGo_black"
+                         android:fontFamily="@font/sf_ui_display"
+                         android:textSize="@dimen/_12ssp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Back card"/>
+
+                 </LinearLayout>
+             </com.google.android.material.card.MaterialCardView>
+
+             
+         </LinearLayout>
+
+         <TextView
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/driving_lisence"
+             android:textSize="@dimen/_15ssp"
+             android:fontFamily="@font/sf_ui_display_medium"
+             android:textColor="@color/black"
+             android:layout_gravity="start"/>
+         <com.google.android.material.card.MaterialCardView
+             app:cardCornerRadius="@dimen/_5sdp"
+             app:cardBackgroundColor="@color/bGo_bgColor"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_100sdp">
+             <LinearLayout
+                 android:orientation="vertical"
+                 android:gravity="center|center_horizontal"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+                 <ImageView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:visibility="gone"
+                     android:id="@+id/diImage"/>
+                 <ImageView
+                     android:id="@+id/drivingLicense"
+                     app:tint="@color/bGo_imageBg"
+                     android:layout_width="@dimen/_50sdp"
+                     android:layout_height="@dimen/_50sdp"
+                     android:src="@drawable/add_photo"/>
+                 <TextView
+                     android:id="@+id/textFornt3"
+                     android:textColor="@color/bGo_black"
+                     android:fontFamily="@font/sf_ui_display"
+                     android:textSize="@dimen/_12ssp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Driving lisence Image"/>
+
+             </LinearLayout>
+         </com.google.android.material.card.MaterialCardView>
+         
+     </LinearLayout>
+
+</FrameLayout>
