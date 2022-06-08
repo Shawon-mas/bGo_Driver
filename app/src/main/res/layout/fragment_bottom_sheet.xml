@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/_20sdp"
+    tools:context=".view.BottomSheet">
+    <ImageView
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thanks"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textSize="@dimen/_25ssp"
+        android:textColor="@color/bGo_textColorPrimary"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/success_document"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/bGo_textColorProfile"
+
+        />
+
+    <ImageView
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/thubmsup"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_90sdp"/>
+    <TextView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/success_document"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/bGo_textColorProfile"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_vehicle"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/bGo_mainColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Add Vehicle"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sf_ui_display"
+        android:textSize="@dimen/_14ssp"
+        app:cornerRadius="@dimen/_5sdp"/>
+
+</LinearLayout>

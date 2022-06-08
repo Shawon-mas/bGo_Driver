@@ -30,6 +30,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nid">National Id</string>
     <string name="driving_lisence">Driving Lisence</string>
+    <string name="one">1.Show your face inside the frame</string>
+    <string name="success_document">You have successfully added all the information and important document.</string>
+    <string name="thanks">Thank You</string>
 
 
 </resources>

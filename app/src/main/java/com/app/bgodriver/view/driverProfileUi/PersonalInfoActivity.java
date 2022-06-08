@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import com.app.bgodriver.model.FragmentToActivity;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -27,7 +29,9 @@ import java.util.ArrayList;
 public class PersonalInfoActivity extends AppCompatActivity implements FragmentToActivity {
     private ActivityPersonalInfoBinding binding;
     int Id;
-
+    int backId;
+   String a,b;
+    EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,9 +73,14 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
              @Override
              public void onClick(View v)
              {
+                  editText=findViewById(R.id.generalInfo_name);
+                 if (editText.getText().toString().isEmpty())
+                 {
+                     editText.setError("Enter Name");
+                     editText.requestFocus();
+                     return;
+                 }
                  int id=binding.stepView.getCurrentStep();
-
-
 
                  if (id==0)
                  {
@@ -102,9 +111,30 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                      fragmentTransaction.add(R.id.container,new Selfie_Info());
                      fragmentTransaction.addToBackStack(null)
                              .commit();
-                     binding.next.setText("Complete");
-                     binding.stepView.done(true);
+                     binding.done.setVisibility(View.VISIBLE);
+                     binding.next.setVisibility(View.GONE);
 
+                     binding.stepView.done(true);
+                     binding.done.setOnClickListener(new View.OnClickListener() {
+                         @Override
+                         public void onClick(View v) {
+                             BottomSheetDialogFragment bottomSheetDialogFragment=new BottomSheetDialogFragment();
+                             bottomSheetDialogFragment.show(getSupportFragmentManager(),bottomSheetDialogFragment.getTag());
+                             EditText editText_name=findViewById(R.id.generalInfo_name);
+                             EditText editText_email=findViewById(R.id.generalInfo_email);
+                             EditText editText_number=findViewById(R.id.generalInfo_phoneNumber);
+                             EditText editText_blood=findViewById(R.id.generalInfo_bloodGroup);
+                             String name=editText_name.getText().toString();
+                             String email=editText_email.getText().toString();
+                             String number=editText_number.getText().toString();
+                             String blood=editText_blood.getText().toString();
+                             Log.d("name:",name);
+                             Log.d("email:",email);
+                             Log.d("number:",number);
+                             Log.d("blood:",blood);
+
+                         }
+                     });
                  }
 
 
@@ -113,31 +143,38 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
          binding.backButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+
                  int id=binding.stepView.getCurrentStep();
                  if (id==0)
                  {
                      startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
-                     Id=id+1;
+                     backId=id+1;
+                     binding.done.setVisibility(View.GONE);
+                     binding.next.setVisibility(View.VISIBLE);
                  }else if (id==1)
                  {
+                     binding.done.setVisibility(View.GONE);
+                     binding.next.setVisibility(View.VISIBLE);
+
                      FrameLayout frameLayout=findViewById(R.id.frameLayout2);
                      frameLayout.setVisibility(View.GONE);
 
                      FrameLayout frameLayout1=findViewById(R.id.frameLayout1);
                      frameLayout1.setVisibility(View.VISIBLE);
 
-                     binding.next.setText("Next");
                      binding.stepView.go(id-1,true);
-                     Id=id+1;
+                     backId=id+1;
                  }else if (id==2){
+                     binding.done.setVisibility(View.GONE);
+                     binding.next.setVisibility(View.VISIBLE);
+
                      FrameLayout frameLayout=findViewById(R.id.frameLayout3);
                      frameLayout.setVisibility(View.GONE);
 
                      FrameLayout frameLayout2=findViewById(R.id.frameLayout2);
                      frameLayout2.setVisibility(View.VISIBLE);
-
-                     binding.next.setText("Next");
                      binding.stepView.go(id-1,true);
+
                  }
 
              }
@@ -145,8 +182,9 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     }
 
     @Override
-    public void communicate(String comm,String name) {
-        Log.d("received", comm+"\n"+name);
+    public void communicate(String a,String b) {
+        Log.d("name", a);
+        Log.d("number", b);
 
     }
 
@@ -155,6 +193,12 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
         super.onActivityResult(requestCode, resultCode, data);
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
     }
 }
 /*

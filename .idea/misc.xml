@@ -15,13 +15,16 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_personal_info.xml" value="0.2" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_splash.xml" value="0.17" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_test.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_vehicle_info.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/custom_spinner.xml" value="0.22447916666666667" />
-        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_general__info.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_general__info.xml" value="0.2984375" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_nid__info.xml" value="0.25" />
-        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_selfie__info.xml" value="0.13" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_selfie__info.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step1.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step2.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step3.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/loading.xml" value="0.2234375" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/tutorial_layout.xml" value="0.22" />
       </map>
     </option>

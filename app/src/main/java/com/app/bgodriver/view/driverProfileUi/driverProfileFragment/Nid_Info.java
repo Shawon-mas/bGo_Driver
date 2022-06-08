@@ -147,6 +147,10 @@ public class Nid_Info extends Fragment {
                 }
 
             });
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
 
 }
 /*

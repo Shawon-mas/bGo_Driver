@@ -58,8 +58,7 @@ public class Selfie_Info extends Fragment {
                 if (data != null && result.getResultCode() == Activity.RESULT_OK)
                 {
                     Uri uri = data.getData();
-
-
+                    Log.d("uri:",String.valueOf(uri));
                     binding.profileImage.setImageURI(uri);
                     binding.profileImage.invalidate();
 
@@ -70,10 +69,9 @@ public class Selfie_Info extends Fragment {
 
             });
 
+
     @Override
-    public void onDestroy() {
-
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
     }
-
 }

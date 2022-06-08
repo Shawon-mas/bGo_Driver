@@ -2,12 +2,16 @@ package com.app.bgodriver.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.app.bgodriver.R;
 import com.app.bgodriver.api.loginWithPhoneAPi.ApiInstance;
 import com.app.bgodriver.api.loginWithPhoneAPi.ApiInterface;
@@ -21,6 +25,10 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
+    Dialog dialog;
+    LottieAnimationView lottieAnimationView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +44,23 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                dialogBox();
+
                 binding.loginIndicator.setVisibility(View.VISIBLE);
                 validation();
                 sendOtp();
             }
         });
+    }
+
+    private void dialogBox() {
+        dialog = new Dialog(this);
+        dialog.setContentView(R.layout.loading);
+        dialog.getWindow().setLayout(500, 500);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        // dialog1.getWindow().setWindowAnimations(R.style.AnimationForDialog);
+        lottieAnimationView=dialog.findViewById(R.id.animationView);
+        dialog.show();
     }
 
     private void validation() {
@@ -65,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<DataResponse> call, Response<DataResponse> response) {
                 if(response.isSuccessful())
                 {
+                    dialog.cancel();
                     binding.loginIndicator.setVisibility(View.INVISIBLE);
                     DataResponse dataResponse=response.body();
                     String message=dataResponse.getMessage();
@@ -80,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<DataResponse> call, Throwable t)
             {
+                dialog.cancel();
                 binding.loginIndicator.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(),"Something Went Wrong" ,Toast.LENGTH_LONG).show();
                 Log.d("Message:",t.getMessage());
