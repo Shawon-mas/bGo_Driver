@@ -1,9 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.driverProfileUi.VehicleInfoActivity">
+    <RelativeLayout
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:padding="@dimen/_10sdp"
+        android:fitsSystemWindows="true"
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:backgroundTintMode="screen"
+            android:id="@+id/vBack_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"/>
+        <TextView
+            android:id="@+id/vehicleText"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/vBack_button"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vehicle"
+            android:textSize="@dimen/_20ssp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_alignParentEnd="true"
+            android:text="Cancel"
+            android:textColor="@color/bGo_mainColor"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/rawText"
+        android:layout_below="@id/layout1"
+       android:textSize="@dimen/_12ssp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="@string/bGo_vehicle_des" />
+    <com.shuhart.stepview.StepView
+       android:layout_below="@+id/rawText"
+        android:id="@+id/step_viewVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:sv_doneCircleColor="@color/bGo_mainColor"
+        app:sv_doneCircleRadius="12dp"
+        app:sv_doneStepLineColor="@color/bGo_textColorSecondary"
+        app:sv_doneStepMarkColor="@color/white"
+        app:sv_doneTextColor="@color/bGo_textColorSecondary"
+        app:sv_nextStepLineColor="@color/bGo_textColorSecondary"
+        app:sv_nextTextColor="@color/bGo_textColorSecondary"
+        app:sv_selectedCircleColor="@color/bGo_mainColor"
+        app:sv_selectedCircleRadius="12dp"
+        app:sv_selectedStepNumberColor="@color/bGo_textColorSecondary"
+        app:sv_selectedTextColor="@color/white"
+        app:sv_stepLineWidth="1dp"
+        app:sv_stepNumberTextSize="5sp"
+        app:sv_stepPadding="4dp"
+        app:sv_stepViewStyle="@style/StepView"
+        app:sv_typeface="@font/sf_ui_display" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_below="@id/step_viewVehicle"
+        android:layout_above="@id/nextV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/viewPagerVehicle"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:id="@+id/nextV"
+        app:cornerRadius="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:backgroundTint="@color/bGo_mainColor"
+        android:text="Next" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:visibility="gone"
+        android:id="@+id/doneV"
+        app:cornerRadius="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:backgroundTint="@color/bGo_mainColor"
+        android:text="Complete" />
+
+</RelativeLayout>

@@ -4,39 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".view.driverProfileUi.PersonalInfoActivity">
-    <LinearLayout
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:fitsSystemWindows="true"
         android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp">
+        android:layout_height="?actionBarSize">
         <ImageButton
-
+            android:layout_centerVertical="true"
             android:backgroundTintMode="screen"
-            android:id="@+id/back_button"
+            android:id="@+id/pBack_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back"/>
         <TextView
+            android:id="@+id/vehicleText"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pBack_button"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Personal Profile"
+            android:text="@string/personal_profile"
             android:textSize="@dimen/_20ssp"
             android:fontFamily="@font/sf_ui_display_medium"
             android:textColor="@color/black"
-           />
+            />
 
-    </LinearLayout>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_alignParentEnd="true"
+            android:text="Cancel"
+            android:textColor="@color/bGo_mainColor"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <com.shuhart.stepview.StepView
         android:layout_below="@id/layout1"
         android:id="@+id/step_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/_10sdp"
         app:sv_doneCircleColor="@color/bGo_mainColor"
         app:sv_doneCircleRadius="12dp"
         app:sv_doneStepLineColor="@color/bGo_textColorSecondary"
@@ -53,13 +66,18 @@
         app:sv_stepPadding="4dp"
         app:sv_stepViewStyle="@style/StepView"
         app:sv_typeface="@font/sf_ui_display" />
-     <FrameLayout
+   <!--  <FrameLayout
          android:id="@+id/container"
          android:layout_below="@id/step_view"
          android:layout_above="@id/next"
          android:layout_width="match_parent"
-         android:layout_height="match_parent"/>
-
+         android:layout_height="match_parent"/>-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_below="@id/step_view"
+        android:layout_above="@id/next"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager2"/>
     <com.google.android.material.button.MaterialButton
         android:layout_marginBottom="@dimen/_10sdp"
         android:id="@+id/next"

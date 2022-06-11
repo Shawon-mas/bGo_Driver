@@ -56,7 +56,8 @@ public class InitProfileActivity extends AppCompatActivity {
 
     private void goToVehicleActivity()
     {
-        
+        startActivity(new Intent(getApplicationContext(),VehicleInfoActivity.class));
+
 
     }
 

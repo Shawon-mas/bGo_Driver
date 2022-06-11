@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.driverProfileUi.driverDocumentFragment.GeneralInfo">
+         <LinearLayout
+             android:orientation="vertical"
+             android:gravity="center_horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             <TextView
+                 android:layout_marginHorizontal="@dimen/_15sdp"
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/car_type"
+                 android:textSize="@dimen/_14ssp"
+                 android:fontFamily="@font/sf_ui_display_medium"
+                 android:textColor="@color/black"
+                 android:layout_gravity="start"/>
+             <EditText
+                 android:editable="false"
+                 android:inputType="none"
+                 android:drawableRight="@drawable/arrow_down"
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:layout_marginHorizontal="@dimen/_15sdp"
+                 android:gravity="center_vertical"
+                 android:id="@+id/generalInfo_gender"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40ssp"
+                 android:background="@drawable/outline_shape"
+                 android:fontFamily="@font/sf_ui_display"
+                 android:textStyle="bold"
+                 android:hint="Premium Sedan  (4 seat)"
+                 android:textColorHint="@color/bGo_inputBoxTextColor"
+                 android:imeOptions="actionNext"
+                 android:importantForAutofill="no"
+                 android:maxLines="1"
+                 android:paddingStart="@dimen/_16sdp"
+                 android:paddingEnd="@dimen/_16sdp"
+                 android:textColor="@color/bGo_inputBoxTextColor"
+                 android:textSize="@dimen/_12ssp" />
+             <TextView
+                 android:layout_marginHorizontal="@dimen/_15sdp"
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Brand Name"
+                 android:textSize="@dimen/_14ssp"
+                 android:fontFamily="@font/sf_ui_display_medium"
+                 android:textColor="@color/black"
+                 android:layout_gravity="start"/>
+             <EditText
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:layout_marginHorizontal="@dimen/_15sdp"
+                 android:gravity="center_vertical"
+                 android:id="@+id/drivergeneralInfo_gender"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40ssp"
+                 android:background="@drawable/outline_shape"
+                 android:fontFamily="@font/sf_ui_display"
+                 android:textStyle="bold"
+                 android:hint="Enter the brand name"
+                 android:textColorHint="@color/bGo_inputBoxTextColor"
+                 android:imeOptions="actionNext"
+                 android:importantForAutofill="no"
+                 android:maxLines="1"
+                 android:paddingStart="@dimen/_16sdp"
+                 android:paddingEnd="@dimen/_16sdp"
+                 android:textColor="@color/bGo_inputBoxTextColor"
+                 android:textSize="@dimen/_12ssp" />
+             <LinearLayout
+
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:layout_marginHorizontal="@dimen/_15sdp"
+                 android:weightSum="4"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <EditText
+                     android:padding="@dimen/_3ssp"
+                     android:drawableRight="@drawable/arrow_down"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="@dimen/_40ssp"
+                     android:background="@drawable/outline_shape"
+                     android:fontFamily="@font/sf_ui_display"
+                     android:textStyle="bold"
+                     android:hint="Dhaka Metro"
+                     android:textColorHint="@color/bGo_inputBoxTextColor"
+                     android:maxLines="1"
+                     android:textColor="@color/bGo_inputBoxTextColor"
+                     android:textSize="@dimen/_12ssp" />
+                 <EditText
+                     android:drawableRight="@drawable/arrow_down"
+                     android:layout_weight="1"
+                     android:padding="@dimen/_3ssp"
+
+                     android:gravity="center_vertical"
+                     android:layout_width="0dp"
+                     android:layout_height="@dimen/_40ssp"
+                     android:background="@drawable/outline_shape"
+                     android:fontFamily="@font/sf_ui_display"
+                     android:textStyle="bold"
+                     android:hint="BA"
+                     android:textColorHint="@color/bGo_inputBoxTextColor"
+                     android:imeOptions="actionNext"
+                     android:importantForAutofill="no"
+                     android:maxLines="1"
+
+                     android:textColor="@color/bGo_inputBoxTextColor"
+                     android:textSize="@dimen/_12ssp" />
+                 <EditText
+                     android:layout_weight="1"
+                     android:gravity="center_vertical"
+                     android:layout_width="0dp"
+                     android:layout_height="@dimen/_40ssp"
+                     android:background="@drawable/outline_shape"
+                     android:fontFamily="@font/sf_ui_display"
+                     android:textStyle="bold"
+                     android:hint="00"
+                     android:textColorHint="@color/bGo_inputBoxTextColor"
+                     android:imeOptions="actionNext"
+                     android:importantForAutofill="no"
+                     android:paddingStart="@dimen/_16sdp"
+                     android:paddingEnd="@dimen/_16sdp"
+                     android:textColor="@color/bGo_inputBoxTextColor"
+                     android:textSize="@dimen/_12ssp" />
+                 <EditText
+                     android:layout_weight="1"
+                     android:gravity="center_vertical"
+                     android:layout_width="0dp"
+                     android:layout_height="@dimen/_40ssp"
+                     android:background="@drawable/outline_shape"
+                     android:fontFamily="@font/sf_ui_display"
+                     android:textStyle="bold"
+                     android:hint="0000"
+                     android:textColorHint="@color/bGo_inputBoxTextColor"
+                     android:imeOptions="actionNext"
+                     android:importantForAutofill="no"
+                     android:maxLines="1"
+                     android:textColor="@color/bGo_inputBoxTextColor"
+                     android:textSize="@dimen/_12ssp" />
+             </LinearLayout>
+
+         </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

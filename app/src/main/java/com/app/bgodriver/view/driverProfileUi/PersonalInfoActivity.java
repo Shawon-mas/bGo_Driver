@@ -7,21 +7,30 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.app.bgodriver.R;
+import com.app.bgodriver.adapter.MyFragmentAdapter;
 import com.app.bgodriver.databinding.ActivityPersonalInfoBinding;
 import com.app.bgodriver.model.FragmentToActivity;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.button.MaterialButton;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -31,22 +40,95 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     int Id;
     int backId;
    String a,b;
-    EditText editText;
+    private MyFragmentAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityPersonalInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initView();
+        clickListener();
         stepViewImplement();
     }
 
+    private void clickListener() {
+        binding.next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if (binding.viewPager2.getCurrentItem() < 1)
+                {
+                    binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                    binding.stepView.go(1,true);
+                }else if (binding.viewPager2.getCurrentItem() < 2){
+                    binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                    binding.stepView.go(2,true);
+                    binding.done.setVisibility(View.VISIBLE);
+                    binding.next.setVisibility(View.GONE);
+                }
+            }
+        });
+        binding.pBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (binding.viewPager2.getCurrentItem() == 0)
+                {
+                    startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
+
+                }else if (binding.viewPager2.getCurrentItem() == 1){
+                    binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() - 1);
+                    binding.stepView.go(0,true);
+                    binding.done.setVisibility(View.GONE);
+                    binding.next.setVisibility(View.VISIBLE);
+                }else if (binding.viewPager2.getCurrentItem() == 2){
+                    binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() - 1);
+                    binding.stepView.go(1,true);
+                    binding.done.setVisibility(View.GONE);
+                    binding.next.setVisibility(View.VISIBLE);
+                }
+            }
+
+        });
+        binding.done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 opendialog();
+            }
+        });
+    }
+
+    private void opendialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.bottom_dialog);
+        ImageView imageViewCancel=dialog.findViewById(R.id.cancel);
+        imageViewCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        MaterialButton materialButton=dialog.findViewById(R.id.add_vehicle);
+        materialButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),VehicleInfoActivity.class));
+            }
+        });
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+    }
+
     private void initView() {
-        FragmentManager fragmentManager=getSupportFragmentManager();
+        /*FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.container,new General_Info());
         fragmentTransaction.addToBackStack(null)
-                .commit();
+                .commit();*/
     }
 
     private void stepViewImplement() {
@@ -69,116 +151,12 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 .stepNumberTextSize(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._16sdp))
                 .typeface(ResourcesCompat.getFont(getApplicationContext(), R.font.sf_ui_display))
                 .commit();
-         binding.next.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v)
-             {
-                  editText=findViewById(R.id.generalInfo_name);
-                 if (editText.getText().toString().isEmpty())
-                 {
-                     editText.setError("Enter Name");
-                     editText.requestFocus();
-                     return;
-                 }
-                 int id=binding.stepView.getCurrentStep();
-
-                 if (id==0)
-                 {
-
-                     FrameLayout frameLayout=findViewById(R.id.frameLayout1);
-                     frameLayout.setVisibility(View.GONE);
-
-                     binding.stepView.go(id+1,true);
-                     Toast.makeText(getApplicationContext(), "This is nid",  Toast.LENGTH_SHORT).show();
-
-                     FragmentManager fragmentManager=getSupportFragmentManager();
-                     FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-                     fragmentTransaction.add(R.id.container,new Nid_Info());
-                     fragmentTransaction.addToBackStack(null)
-                             .commit();
-
-                     Id=id+1;
-                 }else if (Id==1)
-                 {
-                     FrameLayout frameLayout=findViewById(R.id.frameLayout2);
-                     frameLayout.setVisibility(View.GONE);
-
-                     binding.stepView.go(id+1,true);
-                     Toast.makeText(getApplicationContext(), "This is selfie",  Toast.LENGTH_SHORT).show();
-
-                     FragmentManager fragmentManager=getSupportFragmentManager();
-                     FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-                     fragmentTransaction.add(R.id.container,new Selfie_Info());
-                     fragmentTransaction.addToBackStack(null)
-                             .commit();
-                     binding.done.setVisibility(View.VISIBLE);
-                     binding.next.setVisibility(View.GONE);
-
-                     binding.stepView.done(true);
-                     binding.done.setOnClickListener(new View.OnClickListener() {
-                         @Override
-                         public void onClick(View v) {
-                             BottomSheetDialogFragment bottomSheetDialogFragment=new BottomSheetDialogFragment();
-                             bottomSheetDialogFragment.show(getSupportFragmentManager(),bottomSheetDialogFragment.getTag());
-                             EditText editText_name=findViewById(R.id.generalInfo_name);
-                             EditText editText_email=findViewById(R.id.generalInfo_email);
-                             EditText editText_number=findViewById(R.id.generalInfo_phoneNumber);
-                             EditText editText_blood=findViewById(R.id.generalInfo_bloodGroup);
-                             String name=editText_name.getText().toString();
-                             String email=editText_email.getText().toString();
-                             String number=editText_number.getText().toString();
-                             String blood=editText_blood.getText().toString();
-                             Log.d("name:",name);
-                             Log.d("email:",email);
-                             Log.d("number:",number);
-                             Log.d("blood:",blood);
-
-                         }
-                     });
-                 }
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        adapter=new MyFragmentAdapter(fragmentManager,getLifecycle());
+        binding.viewPager2.setAdapter(adapter);
 
 
-             }
-         });
-         binding.backButton.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
 
-                 int id=binding.stepView.getCurrentStep();
-                 if (id==0)
-                 {
-                     startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
-                     backId=id+1;
-                     binding.done.setVisibility(View.GONE);
-                     binding.next.setVisibility(View.VISIBLE);
-                 }else if (id==1)
-                 {
-                     binding.done.setVisibility(View.GONE);
-                     binding.next.setVisibility(View.VISIBLE);
-
-                     FrameLayout frameLayout=findViewById(R.id.frameLayout2);
-                     frameLayout.setVisibility(View.GONE);
-
-                     FrameLayout frameLayout1=findViewById(R.id.frameLayout1);
-                     frameLayout1.setVisibility(View.VISIBLE);
-
-                     binding.stepView.go(id-1,true);
-                     backId=id+1;
-                 }else if (id==2){
-                     binding.done.setVisibility(View.GONE);
-                     binding.next.setVisibility(View.VISIBLE);
-
-                     FrameLayout frameLayout=findViewById(R.id.frameLayout3);
-                     frameLayout.setVisibility(View.GONE);
-
-                     FrameLayout frameLayout2=findViewById(R.id.frameLayout2);
-                     frameLayout2.setVisibility(View.VISIBLE);
-                     binding.stepView.go(id-1,true);
-
-                 }
-
-             }
-         });
     }
 
     @Override
@@ -201,7 +179,3 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
         startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
     }
 }
-/*
-                stepView.go(stepView.getCurrentStep() + 1, true);
-
- */

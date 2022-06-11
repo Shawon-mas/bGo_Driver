@@ -1,4 +1,4 @@
-package com.app.bgodriver.view;
+package com.app.bgodriver.view.driverProfileUi.driverDocumentFragment;
 
 import android.os.Bundle;
 
@@ -9,10 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.bgodriver.R;
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 
-public class BottomSheet extends BottomSheetDialogFragment {
+public class Registration extends Fragment {
 
 
 
@@ -20,6 +19,6 @@ public class BottomSheet extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottom_sheet, container, false);
+        return inflater.inflate(R.layout.fragment_registration, container, false);
     }
 }
