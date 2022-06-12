@@ -26,6 +26,11 @@
         <item>Yes</item>
         <item>No</item>
     </string-array>
+    <string-array name="aircondition_info">
+
+        <item>AC</item>
+        <item>Non-AC</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nid">National Id</string>
@@ -126,6 +131,12 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="car_type">Car Type</string>
+    <string name="next_s">Next Steps</string>
+    <string name="req_ver">Request for verification</string>
+    <string name="setting">Setting</string>
+    <string name="history">History</string>
+    <string name="offer">Offer</string>
+    <string name="home">Home</string>
 
 
 </resources>

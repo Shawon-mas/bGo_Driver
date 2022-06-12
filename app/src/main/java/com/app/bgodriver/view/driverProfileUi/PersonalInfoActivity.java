@@ -3,9 +3,7 @@ package com.app.bgodriver.view.driverProfileUi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -17,19 +15,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.app.bgodriver.R;
-import com.app.bgodriver.adapter.MyFragmentAdapter;
+import com.app.bgodriver.adapter.ProfileFragmentAdapter;
 import com.app.bgodriver.databinding.ActivityPersonalInfoBinding;
 import com.app.bgodriver.model.FragmentToActivity;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
 import com.shuhart.stepview.StepView;
 
@@ -37,10 +28,8 @@ import java.util.ArrayList;
 
 public class PersonalInfoActivity extends AppCompatActivity implements FragmentToActivity {
     private ActivityPersonalInfoBinding binding;
-    int Id;
-    int backId;
-   String a,b;
-    private MyFragmentAdapter adapter;
+
+    private ProfileFragmentAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +82,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
         binding.done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                  opendialog();
             }
         });
@@ -152,7 +142,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 .typeface(ResourcesCompat.getFont(getApplicationContext(), R.font.sf_ui_display))
                 .commit();
         FragmentManager fragmentManager=getSupportFragmentManager();
-        adapter=new MyFragmentAdapter(fragmentManager,getLifecycle());
+        adapter=new ProfileFragmentAdapter(fragmentManager,getLifecycle());
         binding.viewPager2.setAdapter(adapter);
 
 

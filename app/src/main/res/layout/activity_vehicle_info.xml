@@ -82,16 +82,18 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/_5sdp"
         android:id="@+id/viewPagerVehicle"/>
+
     <com.google.android.material.button.MaterialButton
-        android:layout_marginBottom="@dimen/_10sdp"
+        android:textAllCaps="false"
         android:id="@+id/nextV"
-        app:cornerRadius="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:backgroundTint="@color/bGo_mainColor"
-        android:text="Next" />
+        android:text="@string/next_s"
+        app:cornerRadius="@dimen/_5sdp" />
     <com.google.android.material.button.MaterialButton
         android:layout_marginBottom="@dimen/_10sdp"
         android:visibility="gone"
@@ -102,6 +104,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:backgroundTint="@color/bGo_mainColor"
-        android:text="Complete" />
+        android:text="@string/req_ver" />
 
 </RelativeLayout>

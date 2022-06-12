@@ -35,10 +35,7 @@ public class General_Info extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding=FragmentGeneralInfoBinding.inflate(inflater, container, false);
-          sendDta(
-                  binding.generalInfoName.getText().toString(),
-                  binding.generalInfoPhoneNumber.getText().toString()
-          );
+
         return binding.getRoot();
     }
     @Override

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.driverProfileUi.driverDocumentFragment.CarInfo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/car_type"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textColor="@color/black"
+                android:layout_gravity="start"/>
+            <EditText
+                android:editable="false"
+                android:inputType="none"
+                android:drawableRight="@drawable/arrow_down"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40ssp"
+                android:background="@drawable/outline_shape"
+                android:fontFamily="@font/sf_ui_display"
+                android:textStyle="bold"
+                android:hint="Premium Sedan  (4 seat)"
+                android:textColorHint="@color/bGo_inputBoxTextColor"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:textColor="@color/bGo_inputBoxTextColor"
+                android:textSize="@dimen/_12ssp" />
+            <TextView
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand Name"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textColor="@color/black"
+                android:layout_gravity="start"/>
+            <EditText
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:id="@+id/drivergeneralInfo_gender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40ssp"
+                android:background="@drawable/outline_shape"
+                android:fontFamily="@font/sf_ui_display"
+                android:textStyle="bold"
+                android:hint="Enter the brand name"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:textColor="@color/bGo_inputBoxTextColor"
+                android:textSize="@dimen/_12ssp" />
+            <TextView
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration Number"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textColor="@color/black"
+                android:layout_gravity="start"/>
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:weightSum="3.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:editable="false"
+                    android:inputType="none"
+                    android:padding="@dimen/_10sdp"
+                    android:drawableRight="@drawable/arrow_down"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40ssp"
+                    android:background="@drawable/outline_shape"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textStyle="bold"
+                    android:hint="Dhaka Metro"
+                    android:textColorHint="@color/bGo_inputBoxTextColor"
+                    android:maxLines="1"
+                    android:textColor="@color/bGo_inputBoxTextColor"
+                    android:textSize="@dimen/_12ssp" />
+                <EditText
+                    android:editable="false"
+                    android:inputType="none"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:drawableRight="@drawable/arrow_down"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5ssp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40ssp"
+                    android:background="@drawable/outline_shape"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textStyle="bold"
+                    android:hint="BA"
+                    android:textColorHint="@color/bGo_inputBoxTextColor"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLines="1"
+
+                    android:textColor="@color/bGo_inputBoxTextColor"
+                    android:textSize="@dimen/_12ssp" />
+                <EditText
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40ssp"
+                    android:background="@drawable/outline_shape"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textStyle="bold"
+                    android:hint="00"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:padding="@dimen/_5ssp"
+                    android:textColor="@color/bGo_inputBoxTextColor"
+                    android:textSize="@dimen/_12ssp" />
+                <EditText
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40ssp"
+                    android:background="@drawable/outline_shape"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textStyle="bold"
+                    android:hint="0000"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLines="1"
+                    android:textColor="@color/bGo_inputBoxTextColor"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model Name"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/sf_ui_display_medium"
+                    android:textColor="@color/black"
+                    android:layout_gravity="start"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model Year"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/sf_ui_display_medium"
+                    android:textColor="@color/black"
+                    android:layout_gravity="start"/>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40ssp"
+                    android:background="@drawable/outline_shape"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textStyle="bold"
+                    android:hint="e.g Maxima"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:padding="@dimen/_10ssp"
+                    android:textColor="@color/bGo_inputBoxTextColor"
+                    android:textSize="@dimen/_12ssp" />
+                <EditText
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40ssp"
+                    android:background="@drawable/outline_shape"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textStyle="bold"
+                    android:hint="Enter the year"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLines="1"
+                    android:textColor="@color/bGo_inputBoxTextColor"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seat Capacity"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textColor="@color/black"
+                android:layout_gravity="start"/>
+            <EditText
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_40ssp"
+                android:background="@drawable/outline_shape"
+                android:fontFamily="@font/sf_ui_display"
+                android:textStyle="bold"
+                android:hint="4"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:textColor="@color/bGo_inputBoxTextColor"
+                android:textSize="@dimen/_12ssp" />
+            <TextView
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aircondition System"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textColor="@color/black"
+                android:layout_gravity="start"/>
+            <Spinner
+                android:background="@drawable/outline_shape"
+                android:backgroundTintMode="src_atop"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_20ssp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/generalInfo_drive"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40ssp"
+                android:entries="@array/aircondition_info"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</FrameLayout>

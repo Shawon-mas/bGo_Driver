@@ -50,7 +50,7 @@
                          app:tint="@color/bGo_imageBg"
                          android:layout_width="@dimen/_50sdp"
                          android:layout_height="@dimen/_50sdp"
-                         android:src="@drawable/add_photo"/>
+                         android:src="@drawable/addimage"/>
                      <TextView
                          android:id="@+id/textFornt"
                          android:textColor="@color/bGo_black"
@@ -85,7 +85,7 @@
                          app:tint="@color/bGo_imageBg"
                          android:layout_width="@dimen/_50sdp"
                          android:layout_height="@dimen/_50sdp"
-                         android:src="@drawable/add_photo"/>
+                         android:src="@drawable/addimage"/>
                      <TextView
                          android:id="@+id/textFornt2"
                          android:textColor="@color/bGo_black"
@@ -131,7 +131,7 @@
                      app:tint="@color/bGo_imageBg"
                      android:layout_width="@dimen/_50sdp"
                      android:layout_height="@dimen/_50sdp"
-                     android:src="@drawable/add_photo"/>
+                     android:src="@drawable/addimage"/>
                  <TextView
                      android:id="@+id/textFornt3"
                      android:textColor="@color/bGo_black"

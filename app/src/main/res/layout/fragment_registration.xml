@@ -3,12 +3,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.driverProfileUi.driverDocumentFragment.Registration">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_20sdp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration Papper image"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textColor="@color/black"
+            android:layout_gravity="start"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/bGo_bgColor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_85sdp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    app:tint="@color/bGo_imageBg"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/addimage"/>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax token of the vehicle"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textColor="@color/black"
+            android:layout_gravity="start"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/bGo_bgColor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_85sdp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    app:tint="@color/bGo_imageBg"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/addimage"/>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
 
 </FrameLayout>

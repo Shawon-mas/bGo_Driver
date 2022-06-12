@@ -6,12 +6,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
+import com.app.bgodriver.view.driverProfileUi.driverDocumentFragment.CarImage;
+import com.app.bgodriver.view.driverProfileUi.driverDocumentFragment.CarInfo;
+import com.app.bgodriver.view.driverProfileUi.driverDocumentFragment.Registration;
 
-public class MyFragmentAdapter extends FragmentStateAdapter {
-    public MyFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+
+public class VehicleFragmentAdapter extends FragmentStateAdapter {
+
+    public VehicleFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 
@@ -20,13 +22,13 @@ public class MyFragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         if (position==0)
         {
-            return new General_Info();
+            return new CarInfo();
         }else if (position==1){
-            return new Nid_Info();
+            return new CarImage();
         }else if (position==2){
-            return new Selfie_Info();
+            return new Registration();
         }
-        return new General_Info();
+        return new CarInfo();
     }
 
     @Override
