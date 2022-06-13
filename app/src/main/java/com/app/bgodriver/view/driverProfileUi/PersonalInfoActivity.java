@@ -10,13 +10,16 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.ProfileFragmentAdapter;
 import com.app.bgodriver.databinding.ActivityPersonalInfoBinding;
@@ -30,6 +33,8 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     private ActivityPersonalInfoBinding binding;
 
     private ProfileFragmentAdapter adapter;
+    LottieAnimationView lottieAnimationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,21 +87,39 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
         binding.done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              final Dialog  dialog = new Dialog(PersonalInfoActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-                 opendialog();
+                dialog.setContentView(R.layout.loading);
+                dialog.getWindow().setLayout(500, 500);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog.getWindow().setGravity(Gravity.CENTER);
+
+                // dialog1.getWindow().setWindowAnimations(R.style.AnimationForDialog);
+                lottieAnimationView=dialog.findViewById(R.id.animationView);
+                dialog.show();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.cancel();
+                        opendialog();
+
+                    }
+                },3000);
             }
         });
     }
 
     private void opendialog() {
-        final Dialog dialog = new Dialog(this);
+        final Dialog dialog = new Dialog(PersonalInfoActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.bottom_dialog);
         ImageView imageViewCancel=dialog.findViewById(R.id.cancel);
         imageViewCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                dialog.cancel();
             }
         });
         MaterialButton materialButton=dialog.findViewById(R.id.add_vehicle);

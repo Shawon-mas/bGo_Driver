@@ -7,6 +7,7 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/outline_shape.xml" value="0.11" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/shape_oval.xml" value="0.1395" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/add_photo.xml" value="0.134" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/divider.xml" value="0.134" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/input_bg.xml" value="0.148" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/input_box.xml" value="0.148" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_home.xml" value="0.22447916666666667" />
@@ -14,7 +15,7 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_main.xml" value="0.10916919959473151" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_otp.xml" value="0.14" />
-        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_personal_info.xml" value="0.18" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_personal_info.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_splash.xml" value="0.17" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_test.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_vehicle_info.xml" value="0.18" />
@@ -25,13 +26,18 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_car_info.xml" value="0.25" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_general__info.xml" value="0.2" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_general_info.xml" value="0.22" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_history.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_nid__info.xml" value="0.25" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_offer.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_registration.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_selfie__info.xml" value="0.22" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_setting.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step1.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step2.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_step3.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/loading.xml" value="0.2234375" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/settings_item_layout.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/tutorial_layout.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
       </map>

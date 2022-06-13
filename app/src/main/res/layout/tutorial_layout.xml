@@ -10,7 +10,7 @@
              android:alpha="0.59"
              android:gravity="center"
              android:orientation="vertical"
-             android:background="@drawable/vehicle"
+             android:background="@drawable/tutorial_image"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
              <ImageView
