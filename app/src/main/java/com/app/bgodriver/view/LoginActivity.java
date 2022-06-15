@@ -44,11 +44,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                dialogBox();
+                startActivity(new Intent(getApplicationContext(),OtpActivity.class));
+                finish();
+             //   dialogBox();
 
-                binding.loginIndicator.setVisibility(View.VISIBLE);
-                validation();
-                sendOtp();
+              //  binding.loginIndicator.setVisibility(View.VISIBLE);
+              //  validation();
+              //  sendOtp();
             }
         });
     }

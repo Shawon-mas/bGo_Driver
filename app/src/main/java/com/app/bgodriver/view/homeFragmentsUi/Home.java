@@ -1,5 +1,7 @@
 package com.app.bgodriver.view.homeFragmentsUi;
 
+import static com.app.bgodriver.model.a.isVisible;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -19,6 +21,9 @@ import com.google.android.material.tabs.TabLayout;
 public class Home extends Fragment {
   private FragmentHomeBinding binding;
   private TripsFragmentAdapter adapter;
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

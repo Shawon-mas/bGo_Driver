@@ -43,7 +43,9 @@ public class OtpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                if (binding.otpPin.getOTP().isEmpty())
+                startActivity(new Intent(getApplicationContext(), InitProfileActivity.class));
+                finish();
+               /* if (binding.otpPin.getOTP().isEmpty())
                 {
                     Toast.makeText(getApplicationContext(), "Please Enter Otp",  Toast.LENGTH_SHORT).show();
                 }else {
@@ -56,7 +58,7 @@ public class OtpActivity extends AppCompatActivity {
                     }else {
                         Toast.makeText(getApplicationContext(), "User not verify",  Toast.LENGTH_SHORT).show();
                     }
-                }
+                }*/
 
             }
         });

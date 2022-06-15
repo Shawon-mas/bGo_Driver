@@ -1,10 +1,13 @@
 package com.app.bgodriver.view;
 
+import static com.app.bgodriver.model.a.isVisible;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -63,8 +66,19 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onBackPressed() {
-            binding.bottomNavigation.setSelectedItemId(R.id.navigation_home);
 
-            return;
+        AlertDialog alertDialog = new AlertDialog.Builder(HomeActivity.this).create();
+        alertDialog.setTitle("Wait !");
+        alertDialog.setMessage("Do you want to close the application?");
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                (dialog, which) -> {
+                    dialog.dismiss();
+                    finishAndRemoveTask();
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                (dialog, which) -> dialog.dismiss());
+        alertDialog.show();
+
+
     }
 }

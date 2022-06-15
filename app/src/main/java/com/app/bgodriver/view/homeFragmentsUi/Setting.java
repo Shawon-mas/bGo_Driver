@@ -57,7 +57,7 @@ public class Setting extends Fragment {
             settingsModels.add(new SettingsModel(images[5],"Help"));
             settingsModels.add(new SettingsModel(images[6],"Logout"));
             adapter=new SettingsAdapter(getContext(),settingsModels);
-           binding.settingsRecycler.setAdapter(adapter);
+            binding.settingsRecycler.setAdapter(adapter);
 
 
     }

@@ -21,7 +21,9 @@ import android.widget.Toast;
 import com.airbnb.lottie.LottieAnimationView;
 import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.VehicleFragmentAdapter;
+
 import com.app.bgodriver.databinding.ActivityVehicleInfoBinding;
+import com.app.bgodriver.view.HomeActivity;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -125,8 +127,10 @@ public class VehicleInfoActivity extends AppCompatActivity {
                       public void run() {
                          dialog.cancel();
                           Toast.makeText(VehicleInfoActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                          startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                          finish();
                       }
-                  },6000);
+                  },3000);
               }
           });
     }

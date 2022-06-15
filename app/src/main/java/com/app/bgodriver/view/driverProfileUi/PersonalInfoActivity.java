@@ -127,6 +127,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),VehicleInfoActivity.class));
+                finish();
             }
         });
         dialog.show();
