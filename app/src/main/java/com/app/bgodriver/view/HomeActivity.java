@@ -37,6 +37,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         binding.bottomNavigation.setOnNavigationItemSelectedListener(this);
         binding.bottomNavigation.setSelectedItemId(R.id.navigation_home);
 
+
     }
 
     Home homeFragment=new Home();

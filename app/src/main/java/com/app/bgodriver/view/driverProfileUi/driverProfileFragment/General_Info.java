@@ -20,6 +20,7 @@ public class General_Info extends Fragment {
    private FragmentGeneralInfoBinding binding;
     private FragmentToActivity mCallback;
 
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

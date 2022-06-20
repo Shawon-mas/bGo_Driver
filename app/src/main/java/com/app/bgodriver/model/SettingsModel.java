@@ -4,6 +4,7 @@ public class SettingsModel {
     int image;
     String title;
 
+
     public SettingsModel(int image, String title) {
         this.image = image;
         this.title = title;

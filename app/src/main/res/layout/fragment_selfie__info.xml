@@ -19,28 +19,18 @@
              android:layout_height="@dimen/_300sdp">
 
              <de.hdodenhof.circleimageview.CircleImageView
+                 android:padding="@dimen/_100sdp"
                  android:id="@+id/profile_image"
-                 android:layout_width="match_parent"
+                 android:layout_width="@dimen/_250sdp"
                  android:layout_height="@dimen/_250sdp"
                  android:layout_marginTop="@dimen/_10sdp"
-                 android:scaleType="centerCrop"
-                 android:src="@drawable/person"
-                 android:tint="@color/bGo_inputBg"
-                 android:tintMode="screen"
+                 android:background="@drawable/shape_oval"
+                 android:scaleType="centerInside"
+                 android:src="@drawable/ic_addimage"
                  app:civ_border_color="@color/bGo_textColorProfile"
                  app:civ_border_width="5dp" />
 
-             <ImageView
-                 android:id="@+id/image_icon"
-                 android:layout_width="@dimen/_50ssp"
-                 android:layout_height="@dimen/_50ssp"
-                 android:layout_alignParentBottom="true"
-                 android:layout_marginLeft="-140dp"
-                 android:layout_marginBottom="63dp"
-                 android:layout_toRightOf="@id/profile_image"
-                 android:background="@drawable/shape_oval"
-                 android:scaleType="centerInside"
-                 android:src="@drawable/add_photo" />
+
          </RelativeLayout>
          <LinearLayout
              android:orientation="vertical"

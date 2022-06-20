@@ -36,7 +36,7 @@ public class Selfie_Info extends Fragment {
 
     private void pickImage()
     {
-        binding.imageIcon.setOnClickListener(new View.OnClickListener() {
+        binding.profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ImagePicker.with(getActivity())

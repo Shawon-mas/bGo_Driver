@@ -60,6 +60,7 @@
             app:tabIndicatorColor="@color/bGo_secondaryColor"
             app:tabIndicatorAnimationMode="elastic"
             app:tabIndicator="@drawable/tab_indicator"/>
+
         <androidx.viewpager2.widget.ViewPager2
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_width="match_parent"
