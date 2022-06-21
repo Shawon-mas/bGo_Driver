@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.homeFragmentsUi.settingsChildFragmentsUi.profile.PersonalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/nameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Name"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/personalProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="jenis Iqbal Ahmed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/div1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameId"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div1"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Email"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div1"
+            android:layout_alignStart="@id/personalProfileName"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/personalProfileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="jenis@gmail.com"
+                android:textColor="@color/bGo_mainColor"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_11ssp"
+                android:layout_height="@dimen/_11ssp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_toRightOf="@id/personalProfileEmail"
+                android:src="@drawable/verified"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/div2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div2"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Phone"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div2"
+            android:layout_alignStart="@id/personalProfileName"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/personalProfileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="+880 1677065011"
+                android:textColor="@color/bGo_mainColor"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_11ssp"
+                android:layout_height="@dimen/_11ssp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_toRightOf="@id/personalProfileNumber"
+                android:src="@drawable/verified"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/div3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+        <TextView
+            android:id="@+id/sexText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div3"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Sex"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/personalProfileSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div3"
+            android:layout_alignStart="@id/personalProfileName"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="start"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Male"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/div4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sexText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div4"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Address"
+            android:textSize="@dimen/_12ssp" />
+        <TextView
+            android:layout_alignStart="@id/personalProfileName"
+            android:layout_below="@id/div4"
+            android:id="@+id/personalProfileAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="start"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="32/1 Tazmahal Road.Mohammadpur Dhaka."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

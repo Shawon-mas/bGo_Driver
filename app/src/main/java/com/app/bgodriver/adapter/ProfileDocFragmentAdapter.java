@@ -9,11 +9,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
 import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
-import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.DocumentFragment;
-import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.PersonalFragment;
 
-public class ProfileFragmentAdapter extends FragmentStateAdapter {
-    public ProfileFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+public class ProfileDocFragmentAdapter extends FragmentStateAdapter {
+    public ProfileDocFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 
@@ -22,15 +20,17 @@ public class ProfileFragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         if (position==0)
         {
-            return new PersonalFragment();
+            return new General_Info();
         }else if (position==1){
-            return new DocumentFragment();
+            return new Nid_Info();
+        }else if (position==2){
+            return new Selfie_Info();
         }
-        return new PersonalFragment();
+        return new General_Info();
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }

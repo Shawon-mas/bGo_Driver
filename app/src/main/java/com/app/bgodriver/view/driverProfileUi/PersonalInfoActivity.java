@@ -17,11 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.app.bgodriver.R;
-import com.app.bgodriver.adapter.ProfileFragmentAdapter;
+import com.app.bgodriver.adapter.ProfileDocFragmentAdapter;
 import com.app.bgodriver.databinding.ActivityPersonalInfoBinding;
 import com.app.bgodriver.model.FragmentToActivity;
 import com.google.android.material.button.MaterialButton;
@@ -32,7 +31,7 @@ import java.util.ArrayList;
 public class PersonalInfoActivity extends AppCompatActivity implements FragmentToActivity {
     private ActivityPersonalInfoBinding binding;
 
-    private ProfileFragmentAdapter adapter;
+    private ProfileDocFragmentAdapter adapter;
     LottieAnimationView lottieAnimationView;
 
 
@@ -166,7 +165,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 .typeface(ResourcesCompat.getFont(getApplicationContext(), R.font.sf_ui_display))
                 .commit();
         FragmentManager fragmentManager=getSupportFragmentManager();
-        adapter=new ProfileFragmentAdapter(fragmentManager,getLifecycle());
+        adapter=new ProfileDocFragmentAdapter(fragmentManager,getLifecycle());
         binding.viewPager2.setAdapter(adapter);
 
 
