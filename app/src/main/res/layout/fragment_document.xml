@@ -6,9 +6,196 @@
     tools:context=".view.homeFragmentsUi.settingsChildFragmentsUi.profile.DocumentFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/nidText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="@string/nid_number"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:id="@+id/personalProfileNid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="14857952156311"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/div1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nidText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/passportText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div1"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="@string/passport"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div1"
+            android:layout_alignStart="@id/personalProfileNid"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/personalProfilePassport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="145789514"
+                android:textColor="@color/bGo_mainColor"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/div2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passportText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div2"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="@string/emergency"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div2"
+            android:layout_alignStart="@id/personalProfileNid"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/personalProfileEmergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="+880 1677065011"
+                android:textColor="@color/bGo_mainColor"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_11ssp"
+                android:layout_height="@dimen/_11ssp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_toRightOf="@id/personalProfileEmergency"
+                android:src="@drawable/verified"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/div3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/sexText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div3"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="@string/blood_group"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:id="@+id/personalProfileBlood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div3"
+            android:layout_alignStart="@id/personalProfileNid"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="start"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="A-"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/div4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sexText"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/divider"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div4"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="@string/vehicle_added"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:id="@+id/personalProfileVehicleAdded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/div4"
+            android:layout_alignStart="@id/personalProfileNid"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="start"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="02"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
 
 </FrameLayout>

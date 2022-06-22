@@ -1,6 +1,6 @@
 package com.app.bgodriver.view;
 
-import static com.app.bgodriver.model.a.isVisible;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

@@ -38,48 +38,33 @@ public class Nid_Info extends Fragment {
     }
 
     private void pickImage() {
-        binding.nidFrontImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ImagePicker.with(getActivity())
-                        .crop(16f, 9f)
-                        .compress(1024)
-                        .maxResultSize(1080, 1080)
-                        .createIntent(intent -> {
-                            startForMediaPickerResult.launch(intent);
-                            return null;
-                        });
+        binding.nidFrontImage.setOnClickListener(v -> ImagePicker.with(getActivity())
+                .crop(16f, 9f)
+                .compress(1024)
+                .maxResultSize(1080, 1080)
+                .createIntent(intent -> {
+                    startForMediaPickerResult.launch(intent);
+                    return null;
+                }));
+        binding.nidBackImage.setOnClickListener(v -> ImagePicker.with(getActivity())
+                .crop(16f, 9f)
+
+                .compress(1024)
+                .maxResultSize(1080, 1080)
+                .createIntent(intent -> {
+                    startForMediaPickerResult2.launch(intent);
+                    return null;
+                }));
+        binding.drivingLicense.setOnClickListener(v -> ImagePicker.with(getActivity())
+                .crop(16f, 9f)
+                .compress(1024)
+                .maxResultSize(1080, 1080)
+                .createIntent(intent -> {
+                    startForMediaPickerResult3.launch(intent);
+                    return null;
+                }));
 
 
-            }
-        });
-        binding.nidBackImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ImagePicker.with(getActivity())
-                        .crop(16f, 9f)
-
-                        .compress(1024)
-                        .maxResultSize(1080, 1080)
-                        .createIntent(intent -> {
-                            startForMediaPickerResult2.launch(intent);
-                            return null;
-                        });
-            }
-        });
-        binding.drivingLicense.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ImagePicker.with(getActivity())
-                        .crop(16f, 9f)
-                        .compress(1024)
-                        .maxResultSize(1080, 1080)
-                        .createIntent(intent -> {
-                            startForMediaPickerResult3.launch(intent);
-                            return null;
-                        });
-            }
-        });
     }
 
     private final ActivityResultLauncher<Intent> startForMediaPickerResult = registerForActivityResult(

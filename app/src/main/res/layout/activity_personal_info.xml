@@ -78,16 +78,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/viewPager2"/>
+
     <com.google.android.material.button.MaterialButton
-        android:layout_marginBottom="@dimen/_10sdp"
         android:id="@+id/next"
-        app:cornerRadius="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:backgroundTint="@color/bGo_mainColor"
-        android:text="Next" />
+        android:text="Next"
+        app:cornerRadius="@dimen/_5sdp" />
     <com.google.android.material.button.MaterialButton
         android:layout_marginBottom="@dimen/_10sdp"
         android:visibility="gone"

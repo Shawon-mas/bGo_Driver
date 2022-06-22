@@ -1,6 +1,6 @@
 package com.app.bgodriver.view.homeFragmentsUi;
 
-import static com.app.bgodriver.model.a.isVisible;
+
 
 import android.os.Bundle;
 

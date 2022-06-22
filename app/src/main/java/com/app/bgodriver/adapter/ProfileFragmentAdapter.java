@@ -6,9 +6,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.General_Info;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Nid_Info;
-import com.app.bgodriver.view.driverProfileUi.driverProfileFragment.Selfie_Info;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.DocumentFragment;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.PersonalFragment;
 
