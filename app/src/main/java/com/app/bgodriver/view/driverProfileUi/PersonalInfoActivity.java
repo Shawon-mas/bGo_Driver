@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.app.bgodriver.R;
@@ -54,7 +56,8 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 {
                     binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
                     binding.stepView.go(1,true);
-                }else if (binding.viewPager2.getCurrentItem() < 2){
+                }else if (binding.viewPager2.getCurrentItem() < 2)
+                {
                     binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
                     binding.stepView.go(2,true);
                     binding.done.setVisibility(View.VISIBLE);
@@ -69,12 +72,14 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 {
                     startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
 
-                }else if (binding.viewPager2.getCurrentItem() == 1){
+                }else if (binding.viewPager2.getCurrentItem() == 1)
+                {
                     binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() - 1);
                     binding.stepView.go(0,true);
                     binding.done.setVisibility(View.GONE);
                     binding.next.setVisibility(View.VISIBLE);
-                }else if (binding.viewPager2.getCurrentItem() == 2){
+                }else if (binding.viewPager2.getCurrentItem() == 2)
+                {
                     binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() - 1);
                     binding.stepView.go(1,true);
                     binding.done.setVisibility(View.GONE);
@@ -164,9 +169,13 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 .stepNumberTextSize(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._16sdp))
                 .typeface(ResourcesCompat.getFont(getApplicationContext(), R.font.sf_ui_display))
                 .commit();
+
         FragmentManager fragmentManager=getSupportFragmentManager();
         adapter=new ProfileDocFragmentAdapter(fragmentManager,getLifecycle());
         binding.viewPager2.setAdapter(adapter);
+        binding.viewPager2.setUserInputEnabled(false);
+
+
 
 
 
@@ -187,7 +196,8 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         super.onBackPressed();
         startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
     }

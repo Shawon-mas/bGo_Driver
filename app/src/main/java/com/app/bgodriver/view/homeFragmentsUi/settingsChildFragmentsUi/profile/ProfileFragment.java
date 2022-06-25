@@ -1,5 +1,6 @@
 package com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile;
 
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,8 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.app.bgodriver.R;
+
 import com.app.bgodriver.adapter.ProfileFragmentAdapter;
+
 
 import com.app.bgodriver.databinding.FragmentProfileBinding;
 import com.google.android.material.tabs.TabLayout;
@@ -19,12 +21,16 @@ import com.google.android.material.tabs.TabLayout;
 public class ProfileFragment extends Fragment {
   private FragmentProfileBinding binding;
   private ProfileFragmentAdapter adapter;
+  private boolean clickBack=false;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding=FragmentProfileBinding.inflate(inflater,container,false);
+
         implementTabLayout();
         return binding.getRoot();
     }

@@ -12,18 +12,12 @@
         android:id="@+id/layout_settings"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
-        <ImageButton
-            android:layout_centerVertical="true"
-            android:backgroundTintMode="screen"
-            android:id="@+id/pBack_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"/>
+
+
         <TextView
             android:id="@+id/vehicleText"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/pBack_button"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

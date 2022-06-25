@@ -141,6 +141,8 @@ public class VehicleInfoActivity extends AppCompatActivity {
         FragmentManager fragmentManager=getSupportFragmentManager();
         adapter=new VehicleFragmentAdapter(fragmentManager,getLifecycle());
         binding.viewPagerVehicle.setAdapter(adapter);
+        binding.viewPagerVehicle.setUserInputEnabled(false);
+
 
 
     }
