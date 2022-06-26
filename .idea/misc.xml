@@ -12,6 +12,7 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/input_box.xml" value="0.148" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/line_indicator.xml" value="0.124" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable/tab_indicator.xml" value="0.134" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_bidding_details.xml" value="0.25" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_home.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_init_profile.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_login.xml" value="0.22" />
@@ -23,12 +24,14 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_vehicle_info.xml" value="0.18" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/bottom_dialog.xml" value="0.16" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/custom_spinner.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/driver_list_layout.xml" value="0.25" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_available_trips.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_bids_ongoing.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_car_image.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_car_info.xml" value="0.25" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_document.xml" value="0.25" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_driver_list.xml" value="0.1" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_general__info.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_general_info.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_history.xml" value="0.22447916666666667" />
@@ -57,12 +60,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>

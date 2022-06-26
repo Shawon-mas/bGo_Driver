@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_width="match_parent"
+    app:cardElevation="@dimen/_3sdp"
+    android:layout_height="@dimen/_120sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80sdp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/Driverprofile_image"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/shape_oval"
+                android:src="@drawable/my"
+                android:scaleType="centerCrop"
+                />
+            <ImageView
+                android:id="@+id/driverVerify"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/verified"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/driver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:text="Sadat Hossain Moku"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_below="@id/driver_name"
+                android:id="@+id/driving_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Driving licence No:"
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/bGo_textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/driver_drivingLicenceNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/driver_name"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toRightOf="@id/driving_text"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="458DESRC2GTX500"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_11ssp" />
+            <TextView
+                android:id="@+id/expireText"
+                android:layout_below="@id/driving_text"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expire Date:"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/bGo_textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/expireDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/driving_text"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toRightOf="@id/expireText"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="25/07/2030"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_11ssp" />
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_below="@id/expireText"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number:"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/bGo_textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/driver_phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expireDate"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toRightOf="@id/phoneText"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="01896004851"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/addresText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneText"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:text="Address:"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/driver_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneText"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toRightOf="@id/addresText"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="150/A Mirpur DOHS Dhaka 1212"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_11ssp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

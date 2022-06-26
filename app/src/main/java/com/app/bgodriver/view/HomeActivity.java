@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public void onBackPressed() {
 
-        /*AlertDialog alertDialog = new AlertDialog.Builder(HomeActivity.this).create();
+        AlertDialog alertDialog = new AlertDialog.Builder(HomeActivity.this).create();
         alertDialog.setTitle("Wait !");
         alertDialog.setMessage("Do you want to close the application?");
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
@@ -82,28 +82,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
                 (dialog, which) -> dialog.dismiss());
         alertDialog.show();
-*/
-        int count = getSupportFragmentManager().getBackStackEntryCount();
-        if (count == 0) {
-            AlertDialog alertDialog = new AlertDialog.Builder(HomeActivity.this).create();
-            alertDialog.setTitle("Wait !");
-            alertDialog.setMessage("Do you want to close the application?");
-            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
-                    (dialog, which) -> {
-                        dialog.dismiss();
-                        finishAndRemoveTask();
-                    });
-            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
-                    (dialog, which) -> dialog.dismiss());
-            alertDialog.show();
 
-        } else {
-            int index = ((getSupportFragmentManager().getBackStackEntryCount()) -1);
-            getSupportFragmentManager().popBackStack();
-            FragmentManager.BackStackEntry backEntry = getSupportFragmentManager().getBackStackEntryAt(index);
-            int stackId = backEntry.getId();
-            binding.bottomNavigation.getMenu().getItem(stackId).setChecked(true);
-        }
 
     }
 }

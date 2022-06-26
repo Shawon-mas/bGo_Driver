@@ -142,6 +142,7 @@
     <string name="emergency">Emergency</string>
     <string name="passport">Passport</string>
     <string name="nid_number">NID Number</string>
+    <string name="driverDes">Drivers information need to be added so that the passenger experience is safe.</string>
 
 
 </resources>

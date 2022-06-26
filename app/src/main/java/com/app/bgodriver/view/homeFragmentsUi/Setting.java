@@ -17,6 +17,7 @@ import com.app.bgodriver.adapter.SettingsAdapter;
 import com.app.bgodriver.databinding.FragmentSettingBinding;
 import com.app.bgodriver.model.SettingsItemClick;
 import com.app.bgodriver.model.SettingsModel;
+import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver.DriverList;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -76,23 +77,25 @@ public class Setting extends Fragment implements SettingsItemClick {
 
         switch (position){
             case 0:
-                Toast.makeText(getContext(),"Position is:"+position,Toast.LENGTH_SHORT).show();
                 Fragment fragment=new ProfileFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                // Replace whatever is in the fragment_container view with this fragment,
-                // and add the transaction to the back stack
                 transaction.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
                 transaction.replace(R.id.home_container, fragment);
                 transaction.addToBackStack(null);
-
-                // Commit the transaction
                 transaction.commit();
                 break;
             case 1:
                 Toast.makeText(getContext(),"Position is:"+position,Toast.LENGTH_SHORT).show();
-
                 break;
-                //    getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.home_container,fragment).commit();
+            case 2:
+                Fragment fragmentDriver=new DriverList();
+                FragmentTransaction transactionDriver = getFragmentManager().beginTransaction();
+                transactionDriver.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
+                transactionDriver.replace(R.id.home_container, fragmentDriver);
+                transactionDriver.addToBackStack(null);
+                transactionDriver.commit();
+                break;
+
 
 
         }

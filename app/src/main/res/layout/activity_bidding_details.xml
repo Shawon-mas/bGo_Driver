@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.biddingDetails.BiddingDetails">
+    <RelativeLayout
+        android:padding="@dimen/_5sdp"
+        android:fitsSystemWindows="true"
+        android:id="@+id/layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+       <ImageView
+           android:layout_marginLeft="@dimen/_10sdp"
+           android:id="@+id/biddingBack"
+           android:layout_width="@dimen/_30sdp"
+           android:layout_height="wrap_content"
+           android:src="@drawable/arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_toRightOf="@id/biddingBack"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:text="Bidding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+       android:layout_marginHorizontal="@dimen/_10sdp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:padding="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:padding="@dimen/_10sdp"
+                    android:id="@+id/image_icon"
+                    android:layout_width="@dimen/_70ssp"
+                    android:layout_height="@dimen/_70ssp"
+                    android:background="@drawable/shape_oval"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/car_image" />
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+
+                        android:id="@+id/dl_icon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/dl"/>
+                    <ImageView
+                        android:layout_below="@id/dl_icon"
+                        android:id="@+id/vdot"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/v_dot"/>
+
+                    <TextView
+                        android:fontFamily="@font/sf_ui_display"
+                        android:id="@+id/trip_destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@id/dl_icon"
+                        android:text="Mirpur DOHS Road 127 House 32,Dhaka 1207"
+                        android:textColor="@color/bGo_textColorPrimary"
+                        android:textSize="@dimen/_9ssp"
+                        />
+                    <ImageView
+                        android:layout_below="@id/vdot"
+                        android:id="@+id/cl_icon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/cl"/>
+
+                    <TextView
+                        android:id="@+id/trip_currentLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vdot"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@id/cl_icon"
+                        android:text="Mohammadpur bus stand, Dhaka 1200"
+                        android:textColor="@color/bGo_textColorPrimary"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/sf_ui_display"
+                        />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider"/>
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/timeText"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trip Time"
+                    android:textSize="@dimen/_10ssp"/>
+                <TextView
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:id="@+id/trip_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/timeText"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="29 Mar 2022 | 12:00 PM"
+                    android:textColor="@color/bGo_textColorPrimary"
+                    android:textSize="@dimen/_10ssp" />
+                <TextView
+                    android:id="@+id/passengerText"
+                    android:layout_below="@id/timeText"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Passenger"
+                    android:textSize="@dimen/_10ssp"/>
+
+                <TextView
+                    android:id="@+id/trip_passenger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeText"
+                    android:layout_alignStart="@id/trip_date"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/passengerText"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="6 peoples"
+                    android:textColor="@color/bGo_textColorPrimary"
+                    android:textSize="@dimen/_10ssp" />
+                <TextView
+                    android:id="@+id/roundTripText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/trip_round"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Round Trip"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/trip_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="No"
+                    android:textColor="@color/bGo_textColorPrimary"
+                    android:textSize="@dimen/_10ssp" />
+                <TextView
+                    android:layout_below="@id/trip_round"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/trip_acType"
+                    android:textColor="@color/bGo_textColorPrimary"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="@dimen/_9ssp"/>
+                <TextView
+                    android:layout_alignStart="@id/roundTripText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/roundTripText"
+                    android:layout_toLeftOf="@id/trip_acType"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="AC"
+                    android:textSize="@dimen/_10ssp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

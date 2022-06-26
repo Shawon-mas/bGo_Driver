@@ -4,6 +4,7 @@ package com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
@@ -11,10 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.ProfileFragmentAdapter;
 
 
 import com.app.bgodriver.databinding.FragmentProfileBinding;
+import com.app.bgodriver.view.homeFragmentsUi.Setting;
 import com.google.android.material.tabs.TabLayout;
 
 
@@ -30,7 +33,14 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding=FragmentProfileBinding.inflate(inflater,container,false);
-
+        binding.backProfile.setOnClickListener(v -> {
+            Fragment fragment=new Setting();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
+            transaction.replace(R.id.home_container, fragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
         implementTabLayout();
         return binding.getRoot();
     }
