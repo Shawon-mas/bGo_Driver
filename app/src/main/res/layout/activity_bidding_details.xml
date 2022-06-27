@@ -34,7 +34,6 @@
 
 
     </RelativeLayout>
-
     <com.google.android.material.card.MaterialCardView
        android:layout_marginHorizontal="@dimen/_10sdp"
         app:cardUseCompatPadding="true"
@@ -52,7 +51,7 @@
                 android:layout_height="match_parent">
                 <ImageView
                     android:padding="@dimen/_10sdp"
-                    android:id="@+id/image_icon"
+                    android:id="@+id/biddingDetails_image"
                     android:layout_width="@dimen/_70ssp"
                     android:layout_height="@dimen/_70ssp"
                     android:background="@drawable/shape_oval"
@@ -77,16 +76,15 @@
                         android:src="@drawable/v_dot"/>
 
                     <TextView
-                        android:fontFamily="@font/sf_ui_display"
-                        android:id="@+id/trip_destination"
+                        android:id="@+id/biddingDetails_destination"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_toRightOf="@id/dl_icon"
+                        android:fontFamily="@font/sf_ui_display"
                         android:text="Mirpur DOHS Road 127 House 32,Dhaka 1207"
                         android:textColor="@color/bGo_textColorPrimary"
-                        android:textSize="@dimen/_9ssp"
-                        />
+                        android:textSize="@dimen/_9ssp" />
                     <ImageView
                         android:layout_below="@id/vdot"
                         android:id="@+id/cl_icon"
@@ -95,17 +93,16 @@
                         android:src="@drawable/cl"/>
 
                     <TextView
-                        android:id="@+id/trip_currentLocation"
+                        android:id="@+id/biddingDetails_currentLocation"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/vdot"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_toRightOf="@id/cl_icon"
+                        android:fontFamily="@font/sf_ui_display"
                         android:text="Mohammadpur bus stand, Dhaka 1200"
                         android:textColor="@color/bGo_textColorPrimary"
-                        android:textSize="@dimen/_9ssp"
-                        android:fontFamily="@font/sf_ui_display"
-                        />
+                        android:textSize="@dimen/_9ssp" />
 
 
                 </RelativeLayout>
@@ -119,18 +116,20 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_ui_display"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Trip Time"
-                    android:textSize="@dimen/_10ssp"/>
+                    android:textSize="@dimen/_10ssp" />
+
                 <TextView
-                    android:layout_marginHorizontal="@dimen/_15sdp"
-                    android:id="@+id/trip_date"
+                    android:id="@+id/biddingDetails_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
                     android:layout_toRightOf="@id/timeText"
                     android:fontFamily="@font/sf_ui_display"
                     android:text="29 Mar 2022 | 12:00 PM"
@@ -146,11 +145,11 @@
                     android:textSize="@dimen/_10ssp"/>
 
                 <TextView
-                    android:id="@+id/trip_passenger"
+                    android:id="@+id/biddingDetails_passenger"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/timeText"
-                    android:layout_alignStart="@id/trip_date"
+                    android:layout_alignStart="@id/biddingDetails_date"
                     android:layout_marginTop="0dp"
                     android:layout_toRightOf="@id/passengerText"
                     android:fontFamily="@font/sf_ui_display"
@@ -161,13 +160,13 @@
                     android:id="@+id/roundTripText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/trip_round"
+                    android:layout_toLeftOf="@id/biddingDetails_round"
                     android:fontFamily="@font/sf_ui_display"
                     android:text="Round Trip"
                     android:textSize="@dimen/_10ssp" />
 
                 <TextView
-                    android:id="@+id/trip_round"
+                    android:id="@+id/biddingDetails_round"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -176,23 +175,24 @@
                     android:text="No"
                     android:textColor="@color/bGo_textColorPrimary"
                     android:textSize="@dimen/_10ssp" />
+
                 <TextView
-                    android:layout_below="@id/trip_round"
-                    android:layout_alignParentEnd="true"
-                    android:id="@+id/trip_acType"
-                    android:textColor="@color/bGo_textColorPrimary"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:fontFamily="@font/sf_ui_display"
+                    android:id="@+id/biddingDetails_acType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/biddingDetails_round"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:fontFamily="@font/sf_ui_display"
                     android:text="Yes"
-                    android:textSize="@dimen/_9ssp"/>
+                    android:textColor="@color/bGo_textColorPrimary"
+                    android:textSize="@dimen/_9ssp" />
                 <TextView
                     android:layout_alignStart="@id/roundTripText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/roundTripText"
-                    android:layout_toLeftOf="@id/trip_acType"
+                    android:layout_toLeftOf="@id/biddingDetails_acType"
                     android:fontFamily="@font/sf_ui_display"
                     android:text="AC"
                     android:textSize="@dimen/_10ssp" />
@@ -201,5 +201,22 @@
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:fontFamily="@font/sf_ui_display"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/bGo_textColorPrimary"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_vehicle"/>
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/my_vehicle"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"/>
 
 </LinearLayout>

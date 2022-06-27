@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
            <ImageView
-               android:id="@+id/backdriver"
+               android:id="@+id/backDriver"
                android:layout_width="@dimen/_30sdp"
                android:layout_height="@dimen/_30sdp"
                android:src="@drawable/arrow_back"/>
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_toRightOf="@id/backdriver"
+                android:layout_toRightOf="@id/backDriver"
                 android:fontFamily="@font/sf_ui_display"
                 android:text="Driver"
                 android:textColor="@color/bGo_textColorPrimary"
@@ -66,7 +66,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/backdriver"
+                android:layout_toRightOf="@id/backDriver"
                 android:fontFamily="@font/sf_ui_display"
                 android:text="Driver list"
                 android:textColor="@color/bGo_textColorPrimary"

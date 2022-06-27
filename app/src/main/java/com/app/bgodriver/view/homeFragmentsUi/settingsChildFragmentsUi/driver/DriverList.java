@@ -3,6 +3,7 @@ package com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -11,8 +12,10 @@ import android.view.ViewGroup;
 
 import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.DriverAdapter;
+
 import com.app.bgodriver.databinding.FragmentDriverListBinding;
 import com.app.bgodriver.model.DriverModel;
+import com.app.bgodriver.view.homeFragmentsUi.Setting;
 
 import java.util.ArrayList;
 
@@ -31,6 +34,14 @@ public class DriverList extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding= FragmentDriverListBinding.inflate(inflater, container, false);
+        binding.backDriver.setOnClickListener(v -> {
+            Fragment fragment=new Setting();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
+            transaction.replace(R.id.home_container, fragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
         implementRecyclerview();
         return binding.getRoot();    }
 

@@ -4,6 +4,9 @@ public class DriverModel {
     String name,licenceNo,expireDate,phoneNumber,address,verified;
     int img;
 
+    public DriverModel() {
+    }
+
     public DriverModel(String name, String licenceNo, String expireDate, String phoneNumber, String address, String verified, int img) {
         this.name = name;
         this.licenceNo = licenceNo;

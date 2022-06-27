@@ -77,7 +77,7 @@ private ArrayList<TripModel> tripModelArrayList;
         String roundTrip=tripModelArrayList.get(position).getRoundTrip();
         String tripPassenger=tripModelArrayList.get(position).getTripPassenger();
         String airCondition=tripModelArrayList.get(position).getAirCondition();
-
+        int image=tripModelArrayList.get(position).getCarImage();
         Intent intent=new Intent(getActivity(),BiddingDetails.class);
         intent.putExtra(CURRENTLOCATION_KEY,currentLocation);
         intent.putExtra(DESTINATIONLOCATION_KEY,destinationLocation);
@@ -85,6 +85,8 @@ private ArrayList<TripModel> tripModelArrayList;
         intent.putExtra(ROUNDTRIP_KEY,roundTrip);
         intent.putExtra(TRIPPASSENGER_KEY,tripPassenger);
         intent.putExtra(AIRCONDITION_KEY,airCondition);
+        intent.putExtra("image",image);
+
         startActivity(intent);
 
     }

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_3sdp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <RelativeLayout
+
+          android:layout_marginHorizontal="@dimen/_10sdp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:layout_centerVertical="true"
+              android:id="@+id/vehicle_name"
+              android:textSize="@dimen/_16ssp"
+              android:fontFamily="@font/sf_ui_display_medium"
+              android:textStyle="bold"
+              android:textColor="@color/bGo_textColorPrimary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/car_name"/>
+
+          <TextView
+              android:id="@+id/vehicle_status"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:fontFamily="@font/sf_ui_display"
+              android:text="@string/car_status"
+              android:textColor="@color/bGo_statusColor"
+              android:textSize="@dimen/_12ssp"
+              android:textStyle="bold" />
+      </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divider"/>
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/vehicle_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:text="Dhaka Metro HA-258795"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicle_number"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Vehicle Color:"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/vehicle_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicle_number"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_toRightOf="@id/timeText"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Zed Black"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/passengerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeText"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Sitting Capacity:"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/vehicle_sit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeText"
+                android:layout_alignStart="@id/vehicle_color"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@id/passengerText"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="6 peoples"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/roundTripText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicle_number"
+                android:layout_toLeftOf="@id/vehicle_model"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Model:"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/vehicle_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicle_number"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Allion 2010"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/vehicle_acType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicle_model"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Yes"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/roundTripText"
+                android:layout_alignStart="@id/roundTripText"
+                android:layout_toLeftOf="@id/vehicle_acType"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Aircondition:"
+                android:textSize="@dimen/_10ssp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

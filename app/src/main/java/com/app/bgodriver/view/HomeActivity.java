@@ -11,10 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.app.bgodriver.R;
 import com.app.bgodriver.databinding.ActivityHomeBinding;
+import com.app.bgodriver.model.DriverModel;
 import com.app.bgodriver.view.homeFragmentsUi.History;
 import com.app.bgodriver.view.homeFragmentsUi.Home;
 import com.app.bgodriver.view.homeFragmentsUi.Offer;
@@ -33,9 +35,11 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(binding.getRoot());
         bottomNavImplement();
 
+
     }
 
     private void bottomNavImplement() {
+
         binding.bottomNavigation.setOnNavigationItemSelectedListener(this);
         binding.bottomNavigation.setSelectedItemId(R.id.navigation_home);
 

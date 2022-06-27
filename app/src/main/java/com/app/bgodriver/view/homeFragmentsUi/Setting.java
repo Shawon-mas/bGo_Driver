@@ -19,6 +19,7 @@ import com.app.bgodriver.model.SettingsItemClick;
 import com.app.bgodriver.model.SettingsModel;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver.DriverList;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.ProfileFragment;
+import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.vehicle.Vehicle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -46,13 +47,6 @@ public class Setting extends Fragment implements SettingsItemClick {
         implementRecyclerview();
         return binding.getRoot();
     }
-//Profile
-//Home
-//Driver
-//Vehicle
-//Credit
-//Help
-//Logout
     private void implementRecyclerview() {
 
             binding.settingsRecycler.setHasFixedSize(true);
@@ -94,6 +88,14 @@ public class Setting extends Fragment implements SettingsItemClick {
                 transactionDriver.replace(R.id.home_container, fragmentDriver);
                 transactionDriver.addToBackStack(null);
                 transactionDriver.commit();
+                break;
+            case 3:
+                Fragment fragmentVehicle=new Vehicle();
+                FragmentTransaction transactionVehicle = getFragmentManager().beginTransaction();
+                transactionVehicle.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
+                transactionVehicle.replace(R.id.home_container, fragmentVehicle);
+                transactionVehicle.addToBackStack(null);
+                transactionVehicle.commit();
                 break;
 
 
