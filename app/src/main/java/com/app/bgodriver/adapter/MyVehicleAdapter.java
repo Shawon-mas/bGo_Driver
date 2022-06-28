@@ -44,11 +44,11 @@ public class MyVehicleAdapter extends RecyclerView.Adapter<MyVehicleAdapter.MyVi
        holder.imageView_myVehicleImage.setImageResource(myVehicleModel.getMyVehicleImage());
        holder.textView_myVehicleModel.setText(myVehicleModel.getMyVehicleModel());
        holder.textView_myVehicleNumber.setText(myVehicleModel.getMyVehicleNumber());
-       /*holder.materialCardView.setOnClickListener(v -> {
+       holder.materialCardView.setOnClickListener(v -> {
 
                holder.imageView_myVehicleSelect.setVisibility(View.VISIBLE);
 
-       });*/
+       });
 
 
 
