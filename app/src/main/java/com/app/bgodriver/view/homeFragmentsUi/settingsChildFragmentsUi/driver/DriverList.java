@@ -26,7 +26,8 @@ public class DriverList extends Fragment {
     private DriverAdapter adapter;
     int[] images = {R.drawable.my,
             R.drawable.my,
-            R.drawable.my
+            R.drawable.my,
+            R.drawable.sobuj
            };
 
     @Override
@@ -56,6 +57,10 @@ public class DriverList extends Fragment {
         driverModelArrayList.add(new DriverModel(
                 "Jia-Ul-Haque","45TSFGFSG","20/11/2025","01776646603",
                 "North Dhanmondi, Dhaka-1205","true",images[1]
+        ));
+        driverModelArrayList.add(new DriverModel(
+                "Sobuj Islam","45TSFGFSG","20/11/2025","01776646603",
+                "North Dhanmondi, Dhaka-1205","true",images[3]
         ));
         adapter=new DriverAdapter(getContext(),driverModelArrayList);
         binding.driverListRecycler.setAdapter(adapter);

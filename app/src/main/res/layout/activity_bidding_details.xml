@@ -6,217 +6,293 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".view.biddingDetails.BiddingDetails">
-    <RelativeLayout
-        android:padding="@dimen/_5sdp"
-        android:fitsSystemWindows="true"
-        android:id="@+id/layout_settings"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize">
-
-       <ImageView
-           android:layout_marginLeft="@dimen/_10sdp"
-           android:id="@+id/biddingBack"
-           android:layout_width="@dimen/_30sdp"
-           android:layout_height="wrap_content"
-           android:src="@drawable/arrow_back"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_toRightOf="@id/biddingBack"
-            android:fontFamily="@font/sf_ui_display_medium"
-            android:text="Bidding"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_18ssp"
-            android:textStyle="bold"/>
-
-
-    </RelativeLayout>
-    <com.google.android.material.card.MaterialCardView
-       android:layout_marginHorizontal="@dimen/_10sdp"
-        app:cardUseCompatPadding="true"
-        app:cardCornerRadius="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:padding="@dimen/_10sdp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:padding="@dimen/_10sdp"
-                    android:id="@+id/biddingDetails_image"
-                    android:layout_width="@dimen/_70ssp"
-                    android:layout_height="@dimen/_70ssp"
-                    android:background="@drawable/shape_oval"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/car_image" />
-                <RelativeLayout
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/_7sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-
-                        android:id="@+id/dl_icon"
-                        android:layout_width="@dimen/_15sdp"
-                        android:layout_height="@dimen/_15sdp"
-                        android:src="@drawable/dl"/>
-                    <ImageView
-                        android:layout_below="@id/dl_icon"
-                        android:id="@+id/vdot"
-                        android:layout_width="@dimen/_15sdp"
-                        android:layout_height="@dimen/_15sdp"
-                        android:src="@drawable/v_dot"/>
-
-                    <TextView
-                        android:id="@+id/biddingDetails_destination"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:layout_toRightOf="@id/dl_icon"
-                        android:fontFamily="@font/sf_ui_display"
-                        android:text="Mirpur DOHS Road 127 House 32,Dhaka 1207"
-                        android:textColor="@color/bGo_textColorPrimary"
-                        android:textSize="@dimen/_9ssp" />
-                    <ImageView
-                        android:layout_below="@id/vdot"
-                        android:id="@+id/cl_icon"
-                        android:layout_width="@dimen/_15sdp"
-                        android:layout_height="@dimen/_15sdp"
-                        android:src="@drawable/cl"/>
-
-                    <TextView
-                        android:id="@+id/biddingDetails_currentLocation"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/vdot"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:layout_toRightOf="@id/cl_icon"
-                        android:fontFamily="@font/sf_ui_display"
-                        android:text="Mohammadpur bus stand, Dhaka 1200"
-                        android:textColor="@color/bGo_textColorPrimary"
-                        android:textSize="@dimen/_9ssp" />
-
-
-                </RelativeLayout>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/divider"/>
             <RelativeLayout
-                android:layout_marginBottom="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:fitsSystemWindows="true"
+                android:id="@+id/layout_settings"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:id="@+id/biddingBack"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_back"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_toRightOf="@id/biddingBack"
+                    android:fontFamily="@font/sf_ui_display_medium"
+                    android:text="Bidding"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"/>
+
+
+            </RelativeLayout>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:padding="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:padding="@dimen/_10sdp"
+                            android:id="@+id/biddingDetails_image"
+                            android:layout_width="@dimen/_70ssp"
+                            android:layout_height="@dimen/_70ssp"
+                            android:background="@drawable/shape_oval"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/car_image" />
+                        <RelativeLayout
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
 
-                <TextView
-                    android:id="@+id/timeText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="Trip Time"
-                    android:textSize="@dimen/_10ssp" />
+                                android:id="@+id/dl_icon"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:src="@drawable/dl"/>
+                            <ImageView
+                                android:layout_below="@id/dl_icon"
+                                android:id="@+id/vdot"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:src="@drawable/v_dot"/>
 
-                <TextView
-                    android:id="@+id/biddingDetails_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_15sdp"
-                    android:layout_toRightOf="@id/timeText"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="29 Mar 2022 | 12:00 PM"
-                    android:textColor="@color/bGo_textColorPrimary"
-                    android:textSize="@dimen/_10ssp" />
-                <TextView
-                    android:id="@+id/passengerText"
-                    android:layout_below="@id/timeText"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Passenger"
-                    android:textSize="@dimen/_10ssp"/>
+                            <TextView
+                                android:id="@+id/biddingDetails_destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_toRightOf="@id/dl_icon"
+                                android:fontFamily="@font/sf_ui_display"
+                                android:text="Mirpur DOHS Road 127 House 32,Dhaka 1207"
+                                android:textColor="@color/bGo_textColorPrimary"
+                                android:textSize="@dimen/_9ssp" />
+                            <ImageView
+                                android:layout_below="@id/vdot"
+                                android:id="@+id/cl_icon"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:src="@drawable/cl"/>
 
-                <TextView
-                    android:id="@+id/biddingDetails_passenger"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/timeText"
-                    android:layout_alignStart="@id/biddingDetails_date"
-                    android:layout_marginTop="0dp"
-                    android:layout_toRightOf="@id/passengerText"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="6 peoples"
-                    android:textColor="@color/bGo_textColorPrimary"
-                    android:textSize="@dimen/_10ssp" />
-                <TextView
-                    android:id="@+id/roundTripText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/biddingDetails_round"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="Round Trip"
-                    android:textSize="@dimen/_10ssp" />
-
-                <TextView
-                    android:id="@+id/biddingDetails_round"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="No"
-                    android:textColor="@color/bGo_textColorPrimary"
-                    android:textSize="@dimen/_10ssp" />
-
-                <TextView
-                    android:id="@+id/biddingDetails_acType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/biddingDetails_round"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="Yes"
-                    android:textColor="@color/bGo_textColorPrimary"
-                    android:textSize="@dimen/_9ssp" />
-                <TextView
-                    android:layout_alignStart="@id/roundTripText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/roundTripText"
-                    android:layout_toLeftOf="@id/biddingDetails_acType"
-                    android:fontFamily="@font/sf_ui_display"
-                    android:text="AC"
-                    android:textSize="@dimen/_10ssp" />
-            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/biddingDetails_currentLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/vdot"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_toRightOf="@id/cl_icon"
+                                android:fontFamily="@font/sf_ui_display"
+                                android:text="Mohammadpur bus stand, Dhaka 1200"
+                                android:textColor="@color/bGo_textColorPrimary"
+                                android:textSize="@dimen/_9ssp" />
 
 
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/divider"/>
+                    <RelativeLayout
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/timeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="Trip Time"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:id="@+id/biddingDetails_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:layout_toRightOf="@id/timeText"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="29 Mar 2022 | 12:00 PM"
+                            android:textColor="@color/bGo_textColorPrimary"
+                            android:textSize="@dimen/_10ssp" />
+                        <TextView
+                            android:id="@+id/passengerText"
+                            android:layout_below="@id/timeText"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Passenger"
+                            android:textSize="@dimen/_10ssp"/>
+
+                        <TextView
+                            android:id="@+id/biddingDetails_passenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/timeText"
+                            android:layout_alignStart="@id/biddingDetails_date"
+                            android:layout_marginTop="0dp"
+                            android:layout_toRightOf="@id/passengerText"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="6 peoples"
+                            android:textColor="@color/bGo_textColorPrimary"
+                            android:textSize="@dimen/_10ssp" />
+                        <TextView
+                            android:id="@+id/roundTripText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/biddingDetails_round"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="Round Trip"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:id="@+id/biddingDetails_round"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="No"
+                            android:textColor="@color/bGo_textColorPrimary"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:id="@+id/biddingDetails_acType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/biddingDetails_round"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="Yes"
+                            android:textColor="@color/bGo_textColorPrimary"
+                            android:textSize="@dimen/_9ssp" />
+                        <TextView
+                            android:layout_alignStart="@id/roundTripText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/roundTripText"
+                            android:layout_toLeftOf="@id/biddingDetails_acType"
+                            android:fontFamily="@font/sf_ui_display"
+                            android:text="AC"
+                            android:textSize="@dimen/_10ssp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/bGo_textColorPrimary"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_vehicle"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myVehicle_recycler"
+                tools:listitem="@layout/my_vehicle"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:hint="@string/add_driver"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                >
+
+                <AutoCompleteTextView
+                    android:editable="false"
+                    android:inputType="none"
+                    android:id="@+id/filled_exposed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/divider"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_45sdp">
+                        <EditText
+                            android:paddingStart="@dimen/_10sdp"
+                            android:hint="Enter Your Price"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_45sdp"
+                            android:background="@drawable/input_bg"/>
+                        <ImageView
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/_2ssp"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@drawable/send"/>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-    <TextView
-        android:fontFamily="@font/sf_ui_display"
-        android:textSize="@dimen/_12ssp"
-        android:textColor="@color/bGo_textColorPrimary"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginHorizontal="@dimen/_15sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_vehicle"/>
-    <androidx.recyclerview.widget.RecyclerView
-        tools:listitem="@layout/my_vehicle"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 </LinearLayout>

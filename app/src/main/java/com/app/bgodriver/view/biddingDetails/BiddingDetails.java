@@ -10,20 +10,61 @@ import static com.app.bgodriver.global.Constant.TRIPTIME_KEY;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
+import com.app.bgodriver.R;
+import com.app.bgodriver.adapter.MyVehicleAdapter;
 import com.app.bgodriver.databinding.ActivityBiddingDetailsBinding;
+import com.app.bgodriver.model.MyVehicleModel;
+
+import java.util.ArrayList;
 
 
 public class BiddingDetails extends AppCompatActivity {
     private ActivityBiddingDetailsBinding binding;
+    private ArrayList<MyVehicleModel> myVehicleModelArrayList;
+    private MyVehicleAdapter adapter;
+    int[] images = {R.drawable.black_car,
+            R.drawable.blue_car,
+            R.drawable.car_image
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityBiddingDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        addDriver();
+        implementRecycler();
         setBiddingData();
+    }
+
+    private void addDriver() {
+        String[] driver=new String[] {"Sobuj Islam","Md Khaled"};
+        ArrayAdapter<String> arrayAdapter=new ArrayAdapter<>(
+                this,
+                R.layout.drorp_down_item,
+                driver
+        );
+        binding.filledExposed.setAdapter(arrayAdapter);
+        binding.filledExposed.setOnItemClickListener((parent, view, position, id) -> {
+            Toast.makeText(getApplicationContext(),binding.filledExposed.getText().toString(),Toast.LENGTH_SHORT).show();
+        });
+    }
+
+    private void implementRecycler() {
+        binding.myVehicleRecycler.setHasFixedSize(true);
+        myVehicleModelArrayList= new ArrayList<>();
+        myVehicleModelArrayList.add(new MyVehicleModel(
+                images[2],"Toyota Noah 2007","(HA- 587984)"
+        ));
+        myVehicleModelArrayList.add(new MyVehicleModel(
+                images[0],"Toyota Noah 2010","(HA- 167900)"
+        ));
+        adapter=new MyVehicleAdapter(getApplicationContext(),myVehicleModelArrayList);
+        binding.myVehicleRecycler.setAdapter(adapter);
+
     }
 
     private void setBiddingData() {

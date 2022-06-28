@@ -67,6 +67,8 @@ private ArrayList<TripModel> tripModelArrayList;
         binding.availableTripsRecycler.setAdapter(adapter);
 
 
+
+
     }
 
     @Override
