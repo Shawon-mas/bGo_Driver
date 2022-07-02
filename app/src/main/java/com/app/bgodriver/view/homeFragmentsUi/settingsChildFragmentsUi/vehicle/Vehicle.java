@@ -1,5 +1,6 @@
 package com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.vehicle;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.SettingVehicleFragmentAdapter;
 import com.app.bgodriver.databinding.FragmentVehicleBinding;
+import com.app.bgodriver.view.driverProfileUi.VehicleInfoActivity;
 import com.app.bgodriver.view.homeFragmentsUi.Setting;
 import com.google.android.material.tabs.TabLayout;
 
@@ -47,6 +49,15 @@ public class Vehicle extends Fragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 binding.vehicleViewPager2.setCurrentItem(tab.getPosition());
+                int pos=tab.getPosition();
+                switch (pos){
+                    case 0:
+                        break;
+                    case 1:
+                        startActivity(new Intent(getContext(), VehicleInfoActivity.class));
+
+
+                }
             }
 
             @Override

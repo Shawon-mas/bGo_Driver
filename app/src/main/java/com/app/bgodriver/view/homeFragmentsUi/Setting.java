@@ -1,5 +1,9 @@
 package com.app.bgodriver.view.homeFragmentsUi;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +21,7 @@ import com.app.bgodriver.adapter.SettingsAdapter;
 import com.app.bgodriver.databinding.FragmentSettingBinding;
 import com.app.bgodriver.model.SettingsItemClick;
 import com.app.bgodriver.model.SettingsModel;
+import com.app.bgodriver.view.HomeActivity;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver.DriverList;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.ProfileFragment;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.vehicle.Vehicle;
@@ -44,9 +49,16 @@ public class Setting extends Fragment implements SettingsItemClick {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding= FragmentSettingBinding.inflate(inflater, container, false);
+
         implementRecyclerview();
         return binding.getRoot();
     }
+
+
+
+
+
+
     private void implementRecyclerview() {
 
             binding.settingsRecycler.setHasFixedSize(true);

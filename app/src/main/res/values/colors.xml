@@ -21,6 +21,22 @@
     <color name="bGo_black">#000000</color>
     <color name="bGo_statusColor">#006B50</color>
 
+    <!--White Colors-->
+    <color name="fragment_background">#E2E2E2</color>
+    <color name="fragment_home_background">#FFF</color>
+    <color name="activity_background_color">#e5e5e5</color>
+    <color name="card_background_color">#FFF</color>
+    <color name="card_text_color">#000</color>
+
+
+
+    <!--Night Colors-->
+    <color name="fragment_background_dark">#464646</color>
+    <color name="fragment_home_background_dark">#464646</color>
+    <color name="activity_background_color_dark">#424242</color>
+    <color name="card_background_color_dark">#1B1B1B</color>
+    <color name="card_text_color_dark">#FFF</color>
+
 
 
 </resources>

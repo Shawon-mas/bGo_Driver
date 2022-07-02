@@ -19,6 +19,7 @@ import com.app.bgodriver.adapter.ProfileFragmentAdapter;
 import com.app.bgodriver.databinding.FragmentProfileBinding;
 import com.app.bgodriver.view.homeFragmentsUi.Setting;
 import com.google.android.material.tabs.TabLayout;
+import com.squareup.picasso.Picasso;
 
 
 public class ProfileFragment extends Fragment {
@@ -41,6 +42,10 @@ public class ProfileFragment extends Fragment {
             transaction.addToBackStack(null);
             transaction.commit();
         });
+        Picasso.get().load("https://drive.google.com/uc?export=view&id=1O9yri927J8V8GNQYrTpvtunngR-UgtNZ")
+                .placeholder(R.drawable.place)
+                .into(binding.profileImage);
+
         implementTabLayout();
         return binding.getRoot();
     }

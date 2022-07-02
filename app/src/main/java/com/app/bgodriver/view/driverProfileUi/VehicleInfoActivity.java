@@ -150,6 +150,6 @@ public class VehicleInfoActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
+       // startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
     }
 }

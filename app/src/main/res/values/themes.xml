@@ -25,5 +25,28 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <style name="Theme.BGoDriver.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/fragment_background_dark</item>
+        <!-- Customize your theme here. -->
+        <item name="fragment_background_color">@color/fragment_background_dark</item>
+        <item name="fragment_home_background_color">@color/fragment_background_dark</item>
+        <item name="activity_background_color">@color/activity_background_color_dark</item>
+        <item name="card_background_color">@color/card_background_color_dark</item>
+        <item name="text_color">@color/card_text_color_dark</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+    </style>
 
+    <style name="Theme.BGoDriver.White" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Status bar color. -->
+        <!--<item name="android:statusBarColor" tools:targetApi="l">@color/toolbarColorDark</item>-->
+        <!-- Customize your theme here. -->
+        <item name="fragment_background_color">@color/fragment_background</item>
+        <item name="fragment_home_background_color">@color/fragment_home_background</item>
+        <item name="activity_background_color">@color/activity_background_color</item>
+        <item name="card_background_color">@color/card_background_color</item>
+        <item name="text_color">@color/card_text_color</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
 </resources>

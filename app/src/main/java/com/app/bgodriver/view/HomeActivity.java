@@ -21,6 +21,7 @@ import com.app.bgodriver.view.homeFragmentsUi.History;
 import com.app.bgodriver.view.homeFragmentsUi.Home;
 import com.app.bgodriver.view.homeFragmentsUi.Offer;
 import com.app.bgodriver.view.homeFragmentsUi.Setting;
+import com.app.bgodriver.view.theme.GetTheme;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -31,6 +32,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         bottomNavImplement();

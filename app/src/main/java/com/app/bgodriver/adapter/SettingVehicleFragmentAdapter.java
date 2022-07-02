@@ -26,7 +26,7 @@ public class SettingVehicleFragmentAdapter extends FragmentStateAdapter {
         {
             return new VehicleList();
         }else if (position==1){
-            return new AddVehicle();
+           // return new AddVehicle();
         }
         return new VehicleList();
     }

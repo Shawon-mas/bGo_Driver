@@ -60,7 +60,7 @@
                  android:layout_height="@dimen/_100sdp"
                  android:layout_marginTop="@dimen/_10sdp"
                  android:scaleType="centerCrop"
-                 android:src="@drawable/my"
+
                  android:tint="@color/bGo_inputBg"
                  android:tintMode="screen"
                  />

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fragment_background_color" format="reference"/>
+    <attr name="fragment_home_background_color" format="reference"/>
+    <attr name="activity_background_color" format="reference"/>
+    <attr name="card_background_color" format="reference"/>
+    <attr name="text_color" format="reference"/>
+</resources>
