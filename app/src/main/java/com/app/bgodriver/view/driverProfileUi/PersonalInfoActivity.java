@@ -65,6 +65,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 }
             }
         });
+
         binding.pBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

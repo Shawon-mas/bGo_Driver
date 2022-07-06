@@ -1,5 +1,6 @@
 package com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -42,6 +43,9 @@ public class DriverList extends Fragment {
             transaction.replace(R.id.home_container, fragment);
             transaction.addToBackStack(null);
             transaction.commit();
+        });
+        binding.addDriver.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(),AddDriver.class));
         });
         implementRecyclerview();
         return binding.getRoot();    }

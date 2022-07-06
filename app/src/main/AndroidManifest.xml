@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".view.homeFragmentsUi.settingsChildFragmentsUi.driver.AddDriver"
+            android:exported="false" />
+        <activity
             android:name=".view.biddingDetails.BiddingDetails"
             android:exported="false" />
         <activity
@@ -55,11 +58,13 @@
             android:name=".view.SplashActivity"
             android:exported="true">
 
-            <!--<intent-filter>
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
     </application>
 

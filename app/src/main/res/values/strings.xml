@@ -65,6 +65,7 @@
     <string name="noah_2007">Toyota Noah 2007</string>
     <string name="select_vehicle">Select Vehicle</string>
     <string name="add_driver">Add Driver</string>
+    <string name="add_driver_des">Drivers information need to be added so that the passenger experience is safe.</string>
 
 
 </resources>

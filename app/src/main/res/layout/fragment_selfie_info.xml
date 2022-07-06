@@ -19,15 +19,13 @@
              android:layout_height="@dimen/_300sdp">
 
              <de.hdodenhof.circleimageview.CircleImageView
-                 android:layout_centerHorizontal="true"
-                 android:layout_centerVertical="true"
                  android:id="@+id/profile_image"
                  android:layout_width="@dimen/_250sdp"
                  android:layout_height="@dimen/_250sdp"
+                 android:layout_centerInParent="true"
                  android:layout_marginTop="@dimen/_10sdp"
                  android:background="@drawable/shape_oval"
-                 android:scaleType="centerCrop"
-                  />
+                 android:scaleType="centerCrop" />
              <ImageView
                  android:id="@+id/addImage"
                  android:layout_centerVertical="true"
