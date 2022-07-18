@@ -33,12 +33,13 @@
                     android:layout_width="@dimen/_15sdp"
                     android:layout_height="@dimen/_15sdp"
                     android:src="@drawable/dl"/>
+
                 <ImageView
-                    android:layout_below="@id/dl_icon"
                     android:id="@+id/vdot"
                     android:layout_width="@dimen/_15sdp"
                     android:layout_height="@dimen/_15sdp"
-                    android:src="@drawable/v_dot"/>
+                    android:layout_below="@id/dl_icon"
+                    android:src="@drawable/v_dot" />
 
                 <TextView
                     android:fontFamily="@font/sf_ui_display"

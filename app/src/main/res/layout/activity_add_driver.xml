@@ -85,7 +85,6 @@
         android:id="@+id/addDriver_viewPager"/>
 
     <com.google.android.material.button.MaterialButton
-        android:textAllCaps="false"
         android:id="@+id/addDriver_nexStepButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,6 +93,7 @@
         android:layout_marginBottom="@dimen/_10sdp"
         android:backgroundTint="@color/bGo_mainColor"
         android:text="@string/next_s"
+        android:textAllCaps="false"
         app:cornerRadius="@dimen/_5sdp" />
     <com.google.android.material.button.MaterialButton
         android:layout_marginBottom="@dimen/_10sdp"

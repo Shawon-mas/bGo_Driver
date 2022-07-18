@@ -23,6 +23,7 @@ import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.VehicleFragmentAdapter;
 
 import com.app.bgodriver.databinding.ActivityVehicleInfoBinding;
+import com.app.bgodriver.utilites.PreferenceManager;
 import com.app.bgodriver.view.HomeActivity;
 import com.shuhart.stepview.StepView;
 
@@ -33,11 +34,14 @@ public class VehicleInfoActivity extends AppCompatActivity {
     private VehicleFragmentAdapter adapter;
     Dialog dialog;
     LottieAnimationView lottieAnimationView;
+    private PreferenceManager preferenceManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityVehicleInfoBinding.inflate(getLayoutInflater());
+        preferenceManager=new PreferenceManager(getApplicationContext());
         setContentView(binding.getRoot());
         initView();
         clickListener();
@@ -90,8 +94,7 @@ public class VehicleInfoActivity extends AppCompatActivity {
               public void onClick(View v) {
                   if (binding.viewPagerVehicle.getCurrentItem() == 0)
                   {
-                      startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
-
+                     startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
                   }else if (binding.viewPagerVehicle.getCurrentItem() == 1){
                       binding.viewPagerVehicle.setCurrentItem(binding.viewPagerVehicle.getCurrentItem() - 1);
                       binding.stepViewVehicle.go(0,true);

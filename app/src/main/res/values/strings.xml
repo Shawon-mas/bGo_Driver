@@ -54,6 +54,7 @@
     <string name="emergency">Emergency</string>
     <string name="passport">Passport</string>
     <string name="nid_number">NID Number</string>
+    <string name="mobile_number">Mobile Number</string>
     <string name="driverDes">Drivers information need to be added so that the passenger experience is safe.</string>
     <string name="vehicleDes">bGO app allows you to add multiple vehicles and keep all the information up-to-date.</string>
     <string name="developing">Developing</string>
@@ -66,6 +67,11 @@
     <string name="select_vehicle">Select Vehicle</string>
     <string name="add_driver">Add Driver</string>
     <string name="add_driver_des">Drivers information need to be added so that the passenger experience is safe.</string>
+    <string name="email_address">Email Address</string>
+    <string name="sex">Sex</string>
+    <string name="enter_email">Enter the email address</string>
+    <string name="address">Address</string>
+    <string name="enter_address">Enter the address</string>
 
 
 </resources>

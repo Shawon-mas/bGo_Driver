@@ -11,13 +11,15 @@
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
+
         <ImageButton
-            android:layout_centerVertical="true"
-            android:backgroundTintMode="screen"
             android:id="@+id/pBack_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"/>
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerVertical="true"
+            android:backgroundTintMode="screen"
+            android:minHeight="48dp"
+            android:src="@drawable/back" />
         <TextView
             android:id="@+id/vehicleText"
             android:layout_marginHorizontal="@dimen/_5sdp"
@@ -27,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/personal_profile"
-            android:textSize="@dimen/_20ssp"
+            android:textSize="@dimen/_18ssp"
             android:fontFamily="@font/sf_ui_display_medium"
             android:textColor="@color/black"
             />

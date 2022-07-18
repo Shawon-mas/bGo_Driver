@@ -101,7 +101,7 @@
                 app:cardCornerRadius="@dimen/_5sdp"
                 app:cardBackgroundColor="@color/bGo_bgColor"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_85sdp">
+                android:layout_height="@dimen/_100sdp">
                 <LinearLayout
                     android:orientation="vertical"
                     android:gravity="center|center_horizontal"
@@ -136,7 +136,7 @@
                 app:cardCornerRadius="@dimen/_5sdp"
                 app:cardBackgroundColor="@color/bGo_bgColor"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_85sdp">
+                android:layout_height="@dimen/_100sdp">
                 <LinearLayout
                     android:orientation="vertical"
                     android:gravity="center|center_horizontal"

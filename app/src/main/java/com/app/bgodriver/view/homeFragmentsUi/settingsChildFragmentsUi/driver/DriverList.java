@@ -1,5 +1,7 @@
 package com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver;
 
+import static com.app.bgodriver.utilites.Constants.KEY_IS_FIRST_TIME;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,6 +18,7 @@ import com.app.bgodriver.adapter.DriverAdapter;
 
 import com.app.bgodriver.databinding.FragmentDriverListBinding;
 import com.app.bgodriver.model.DriverModel;
+import com.app.bgodriver.utilites.PreferenceManager;
 import com.app.bgodriver.view.homeFragmentsUi.Setting;
 
 import java.util.ArrayList;
@@ -25,6 +28,7 @@ public class DriverList extends Fragment {
     private FragmentDriverListBinding binding;
     private ArrayList<DriverModel> driverModelArrayList;
     private DriverAdapter adapter;
+    private PreferenceManager preferenceManager;
     int[] images = {R.drawable.my,
             R.drawable.my,
             R.drawable.my,
@@ -36,6 +40,7 @@ public class DriverList extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding= FragmentDriverListBinding.inflate(inflater, container, false);
+        preferenceManager=new PreferenceManager(getContext());
         binding.backDriver.setOnClickListener(v -> {
             Fragment fragment=new Setting();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -46,6 +51,7 @@ public class DriverList extends Fragment {
         });
         binding.addDriver.setOnClickListener(v -> {
             startActivity(new Intent(getActivity(),AddDriver.class));
+            preferenceManager.putBoolean(KEY_IS_FIRST_TIME,false);
         });
         implementRecyclerview();
         return binding.getRoot();    }
