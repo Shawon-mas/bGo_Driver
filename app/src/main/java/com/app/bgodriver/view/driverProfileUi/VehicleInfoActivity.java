@@ -1,5 +1,7 @@
 package com.app.bgodriver.view.driverProfileUi;
 
+import static com.app.bgodriver.utilites.Constants.KEY_IS_FIRST_TIME;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
@@ -94,7 +96,13 @@ public class VehicleInfoActivity extends AppCompatActivity {
               public void onClick(View v) {
                   if (binding.viewPagerVehicle.getCurrentItem() == 0)
                   {
-                     startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
+                      if (preferenceManager.getBoolean(KEY_IS_FIRST_TIME))
+                      {
+                          startActivity(new Intent(getApplicationContext(),InitProfileActivity.class));
+
+                      }else {
+                          onBackPressed();
+                      }
                   }else if (binding.viewPagerVehicle.getCurrentItem() == 1){
                       binding.viewPagerVehicle.setCurrentItem(binding.viewPagerVehicle.getCurrentItem() - 1);
                       binding.stepViewVehicle.go(0,true);

@@ -21,8 +21,6 @@
             android:layout_gravity="start"/>
         <EditText
             android:id="@+id/addDriver_pfDriverName"
-            android:editable="false"
-            android:inputType="none"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:gravity="center_vertical"

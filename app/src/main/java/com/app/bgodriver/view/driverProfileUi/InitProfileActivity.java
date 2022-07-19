@@ -1,5 +1,7 @@
 package com.app.bgodriver.view.driverProfileUi;
 
+import static com.app.bgodriver.utilites.Constants.KEY_IS_FIRST_TIME;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,6 +18,7 @@ import com.app.bgodriver.adapter.TutorialAdapter;
 import com.app.bgodriver.databinding.ActivityInitProfileBinding;
 import com.app.bgodriver.databinding.ActivityOtpBinding;
 import com.app.bgodriver.model.TutorialModel;
+import com.app.bgodriver.utilites.PreferenceManager;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 
 import java.util.ArrayList;
@@ -25,11 +28,14 @@ public class InitProfileActivity extends AppCompatActivity {
     private TutorialAdapter adapter;
     private ArrayList<TutorialModel> modelArrayList;
     int count=0;
+    private PreferenceManager preferenceManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityInitProfileBinding.inflate(getLayoutInflater());
+        preferenceManager=new PreferenceManager(getApplicationContext());
         setContentView(binding.getRoot());
         clickListener();
         implementHowItRecylerView();
@@ -57,6 +63,7 @@ public class InitProfileActivity extends AppCompatActivity {
     private void goToVehicleActivity()
     {
         startActivity(new Intent(getApplicationContext(),VehicleInfoActivity.class));
+        preferenceManager.putBoolean(KEY_IS_FIRST_TIME,true);
         finish();
 
 

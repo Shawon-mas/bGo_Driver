@@ -25,12 +25,14 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_splash.xml" value="0.17" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_test.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_vehicle_info.xml" value="0.18" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/bgohelp_item.xml" value="0.2971014492753623" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/bottom_dialog.xml" value="0.16" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/custom_spinner.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/driver_list_layout.xml" value="0.25" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/drorp_down_item.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_add_vehicle.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_available_trips.xml" value="0.22447916666666667" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_bgo_help.xml" value="0.3233695652173913" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_bids_ongoing.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.22447916666666667" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/fragment_car_image.xml" value="0.22" />

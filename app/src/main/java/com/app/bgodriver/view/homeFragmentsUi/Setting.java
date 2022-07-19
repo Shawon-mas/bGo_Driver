@@ -22,6 +22,7 @@ import com.app.bgodriver.databinding.FragmentSettingBinding;
 import com.app.bgodriver.model.SettingsItemClick;
 import com.app.bgodriver.model.SettingsModel;
 import com.app.bgodriver.view.HomeActivity;
+import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.bGoHelp.bgoHelp;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.driver.DriverList;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.profile.ProfileFragment;
 import com.app.bgodriver.view.homeFragmentsUi.settingsChildFragmentsUi.vehicle.Vehicle;
@@ -109,7 +110,22 @@ public class Setting extends Fragment implements SettingsItemClick {
                 transactionVehicle.addToBackStack(null);
                 transactionVehicle.commit();
                 break;
-
+            case 4:
+                /*Fragment fragmentVehicle=new Vehicle();
+                FragmentTransaction transactionVehicle = getFragmentManager().beginTransaction();
+                transactionVehicle.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
+                transactionVehicle.replace(R.id.home_container, fragmentVehicle);
+                transactionVehicle.addToBackStack(null);
+                transactionVehicle.commit();*/
+                break;
+            case 5:
+                Fragment fragmentHelp=new bgoHelp();
+                FragmentTransaction transactionHelp = getFragmentManager().beginTransaction();
+                transactionHelp.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
+                transactionHelp.replace(R.id.home_container, fragmentHelp);
+                transactionHelp.addToBackStack(null);
+                transactionHelp.commit();
+                break;
 
 
         }

@@ -51,7 +51,6 @@ public class DriverList extends Fragment {
         });
         binding.addDriver.setOnClickListener(v -> {
             startActivity(new Intent(getActivity(),AddDriver.class));
-            preferenceManager.putBoolean(KEY_IS_FIRST_TIME,false);
         });
         implementRecyclerview();
         return binding.getRoot();    }

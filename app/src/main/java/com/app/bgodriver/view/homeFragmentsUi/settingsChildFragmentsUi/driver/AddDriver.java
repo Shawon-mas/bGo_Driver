@@ -82,13 +82,7 @@ public class AddDriver extends AppCompatActivity {
         binding.backButtonAddDriver.setOnClickListener(v -> {
             if (binding.addDriverViewPager.getCurrentItem() == 0)
             {
-                if (preferenceManager.getBoolean(KEY_IS_FIRST_TIME))
-                {
-
-                }else {
-                    onBackPressed();
-                    finish();
-                }
+                onBackPressed();
 
             }else if (binding.addDriverViewPager.getCurrentItem() == 1)
             {
