@@ -290,7 +290,15 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginTop="15dp"
+                android:id="@+id/done"
+                app:cornerRadius="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:backgroundTint="@color/bGo_extraColor"
+                android:text="Complete" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

@@ -34,7 +34,7 @@ public class bgoHelp extends Fragment implements ItemClick {
         // Inflate the layout for this fragment
                 binding=FragmentBgoHelpBinding.inflate(inflater,container,false);
                 implementRecycler();
-        Fragment fragment=new AvailableTrips();
+        Fragment fragment=new Test();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
         transaction.replace(R.id.help_container, fragment);
@@ -62,7 +62,7 @@ public class bgoHelp extends Fragment implements ItemClick {
         switch (position)
         {
             case 0:
-                Fragment fragment=new AvailableTrips();
+                Fragment fragment=new Test();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
                 transaction.replace(R.id.help_container, fragment);
@@ -71,7 +71,7 @@ public class bgoHelp extends Fragment implements ItemClick {
 
                 break;
             case 1:
-                Fragment fragment1=new DriverList();
+                Fragment fragment1=new Test();
                 FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
                 transaction1.setCustomAnimations(R.anim.fade_in,R.anim.fade_out);
                 transaction1.replace(R.id.help_container, fragment1);

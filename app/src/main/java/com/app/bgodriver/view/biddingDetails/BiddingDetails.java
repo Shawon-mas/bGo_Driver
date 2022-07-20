@@ -16,12 +16,15 @@ import android.widget.Toast;
 import com.app.bgodriver.R;
 import com.app.bgodriver.adapter.MyVehicleAdapter;
 import com.app.bgodriver.databinding.ActivityBiddingDetailsBinding;
+import com.app.bgodriver.model.BidingItemClick;
 import com.app.bgodriver.model.MyVehicleModel;
+import com.app.bgodriver.model.TripModel;
 
 import java.util.ArrayList;
 
 
-public class BiddingDetails extends AppCompatActivity {
+public class BiddingDetails extends AppCompatActivity implements BidingItemClick {
+    private ArrayList<TripModel> tripModelArrayList;
     private ActivityBiddingDetailsBinding binding;
     private ArrayList<MyVehicleModel> myVehicleModelArrayList;
     private MyVehicleAdapter adapter;
@@ -35,9 +38,16 @@ public class BiddingDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityBiddingDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        clickListeners();
         addDriver();
         implementRecycler();
         setBiddingData();
+    }
+
+    private void clickListeners() {
+        binding.biddingBack.setOnClickListener(v -> {
+            onBackPressed();
+        });
     }
 
     private void addDriver() {
@@ -86,6 +96,11 @@ public class BiddingDetails extends AppCompatActivity {
         binding.biddingDetailsImage.setImageResource(image);
 
 
+
+    }
+
+    @Override
+    public void onBidClick(int position) {
 
     }
 }
