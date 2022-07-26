@@ -9,6 +9,7 @@ import static com.app.bgodriver.global.Constant.TRIPTIME_KEY;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -23,11 +24,12 @@ import com.app.bgodriver.model.TripModel;
 import java.util.ArrayList;
 
 
-public class BiddingDetails extends AppCompatActivity implements BidingItemClick {
+public class BiddingDetails extends AppCompatActivity  {
     private ArrayList<TripModel> tripModelArrayList;
     private ActivityBiddingDetailsBinding binding;
     private ArrayList<MyVehicleModel> myVehicleModelArrayList;
     private MyVehicleAdapter adapter;
+    private String destinationLocation,currentLocation;
     int[] images = {R.drawable.black_car,
             R.drawable.blue_car,
             R.drawable.car_image
@@ -47,6 +49,12 @@ public class BiddingDetails extends AppCompatActivity implements BidingItemClick
     private void clickListeners() {
         binding.biddingBack.setOnClickListener(v -> {
             onBackPressed();
+        });
+        binding.tripConfirmButton.setOnClickListener(v -> {
+            Intent intent=new Intent(getApplicationContext(),TripDetails.class);
+            intent.putExtra("vOne",destinationLocation);
+            intent.putExtra("vTwo",currentLocation);
+            startActivity(intent);
         });
     }
 
@@ -79,8 +87,8 @@ public class BiddingDetails extends AppCompatActivity implements BidingItemClick
 
     private void setBiddingData() {
 
-        String destinationLocation= getIntent().getStringExtra(DESTINATIONLOCATION_KEY);
-        String currentLocation= getIntent().getStringExtra(CURRENTLOCATION_KEY);
+         destinationLocation= getIntent().getStringExtra(DESTINATIONLOCATION_KEY);
+         currentLocation= getIntent().getStringExtra(CURRENTLOCATION_KEY);
         String tripTime= getIntent().getStringExtra(TRIPTIME_KEY);
         String roundTrip= getIntent().getStringExtra(ROUNDTRIP_KEY);
         String passenger= getIntent().getStringExtra(TRIPPASSENGER_KEY);
@@ -97,10 +105,10 @@ public class BiddingDetails extends AppCompatActivity implements BidingItemClick
 
 
 
-    }
-
-    @Override
-    public void onBidClick(int position) {
 
     }
+
+
+
+
 }

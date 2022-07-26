@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginTop="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_container_sent_message"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:id="@+id/chat_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/bGo_textColorPrimary"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/chat"/>
+             <EditText
+                 android:layout_alignParentBottom="true"
+                 android:id="@+id/edit_price"
+                 android:paddingStart="@dimen/_10sdp"
+                 android:paddingEnd="@dimen/_10sdp"
+                 android:hint="Enter your price"
+                 android:layout_marginStart="@dimen/_8sdp"
+                 android:layout_marginEnd="@dimen/_8sdp"
+                 android:background="@drawable/input_box"
+                 android:layout_width="match_parent"
+                 android:layout_toLeftOf="@id/send"
+                 android:layout_marginBottom="@dimen/_10sdp"
+                 android:layout_height="@dimen/_40sdp"
+               />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/send"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/shape_oval"
+            android:id="@+id/send"
+            android:layout_alignParentEnd="true"
+
+            />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
