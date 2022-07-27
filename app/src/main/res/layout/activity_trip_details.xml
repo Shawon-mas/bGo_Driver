@@ -12,7 +12,7 @@
         android:layout_height="@dimen/_300sdp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         app:behavior_hideable="true"
-
+        app:behavior_peekHeight="@dimen/_50sdp"
         >
          <RelativeLayout
 
@@ -30,7 +30,9 @@
                      android:layout_height="@dimen/_50sdp"
                      android:background="@drawable/bottom_sheet_bg"
                      android:text="Trip Details"
+                     android:textSize="@dimen/_14ssp"
                      android:gravity="center_vertical"
+                     android:textColor="@color/white"
                      />
                  <ImageView
                      android:id="@+id/tripDragIcon"
@@ -53,7 +55,7 @@
                  android:layout_height="wrap_content"
                  android:text="Start Point"
                  android:gravity="center_vertical"
-                 android:textSize="@dimen/_14ssp"
+                 android:textSize="@dimen/_12ssp"
                  android:fontFamily="@font/sf_ui_display"
                  android:textColor="@color/bGo_textColorPrimary"
                  />
@@ -82,7 +84,7 @@
                  android:layout_height="wrap_content"
                  android:text="End Point"
                  android:gravity="center_vertical"
-                 android:textSize="@dimen/_14ssp"
+                 android:textSize="@dimen/_12ssp"
                  android:fontFamily="@font/sf_ui_display"
                  android:textColor="@color/bGo_textColorPrimary"
                  />
@@ -109,4 +111,4 @@
     </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-   <!-- app:behavior_peekHeight="@dimen/_50sdp"-->
+   <!-- -->

@@ -37,11 +37,18 @@ public class TripDetails extends AppCompatActivity {
                   switch (newState)
                   {
                       case BottomSheetBehavior.STATE_COLLAPSED:
+                          binding.tripDragIcon.setVisibility(View.VISIBLE);
                           break;
                       case BottomSheetBehavior.STATE_DRAGGING:
                           break;
                       case BottomSheetBehavior.STATE_EXPANDED:
                           binding.tripDragIcon.setVisibility(View.GONE);
+                          break;
+                      case BottomSheetBehavior.STATE_HIDDEN:
+
+                          break;
+                      case BottomSheetBehavior.STATE_SETTLING:
+                          binding.tripDragIcon.setVisibility(View.VISIBLE);
                           break;
                   }
               }
