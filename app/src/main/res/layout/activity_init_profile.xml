@@ -59,8 +59,8 @@
                     android:layout_height="match_parent">
                     <ImageView
                         android:paddingVertical="@dimen/_15sdp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
                         android:src="@drawable/file"/>
                     <LinearLayout
                         android:paddingVertical="@dimen/_10sdp"
@@ -120,8 +120,8 @@
                     <ImageView
                         android:id="@+id/check"
                         android:paddingVertical="@dimen/_15sdp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
                         android:src="@drawable/check"/>
                     <LinearLayout
                         android:layout_marginRight="@dimen/_5sdp"
