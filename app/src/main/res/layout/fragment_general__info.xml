@@ -175,18 +175,19 @@
                     android:fontFamily="@font/sf_ui_display_medium"
                     android:textColor="@color/black"
                     android:layout_gravity="start"/>
+
                 <TextView
                     android:id="@+id/generalInfo_locationMap"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginHorizontal="@dimen/_15sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="From map"
-                    android:textSize="@dimen/_13ssp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="start"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:fontFamily="@font/sf_ui_display_medium"
+                    android:text="From map"
                     android:textColor="@color/bGo_mainColor"
-                    android:layout_gravity="start"/>
+                    android:textSize="@dimen/_13ssp" />
             </RelativeLayout>
             <EditText
                 android:inputType="text"
