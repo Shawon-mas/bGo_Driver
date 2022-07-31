@@ -76,6 +76,8 @@
     <string name="help">You will get an immediate response to any questions you have.</string>
     <string name="type_a_message">Enter your price</string>
     <string name="chat">You need to enter the price for this trip.It is important to ensure that the fare is fair.</string>
+    <string name="google_map_api">AIzaSyDuchuHkODz-B-rMAHx6YMjbgXAOkDPVJg</string>
+
 
 
 </resources>
