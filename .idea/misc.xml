@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/background_sent_message.xml" value="0.318" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/bottom_sheet_bg.xml" value="0.294" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/bottom_sheet_mainBg.xml" value="0.1555" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/bottom_sheet_mainbg.xml" value="0.1555" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/input.xml" value="0.1395" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/outline_shape.xml" value="0.11" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/drawable-v24/shape_oval.xml" value="0.1395" />
@@ -27,7 +29,7 @@
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_personal_info.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_splash.xml" value="0.17" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_test.xml" value="0.22447916666666667" />
-        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_trip_details.xml" value="0.1" />
+        <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_trip_details.xml" value="0.22" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/activity_vehicle_info.xml" value="0.18" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/bgohelp_item.xml" value="0.2971014492753623" />
         <entry key="..\:/android_project/bGo_Driver/app/src/main/res/layout/bottom_dialog.xml" value="0.16" />
