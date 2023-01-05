@@ -143,11 +143,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
     }
 
     private void initView() {
-        /*FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new General_Info());
-        fragmentTransaction.addToBackStack(null)
-                .commit();*/
+
     }
 
     private void stepViewImplement() {
@@ -156,7 +152,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 .selectedTextColor(ContextCompat.getColor(this, R.color.bGo_textColorPrimary))
                 .animationType(StepView.ANIMATION_CIRCLE)
                 .selectedCircleColor(ContextCompat.getColor(this, R.color.bGo_mainColor))
-                .selectedCircleRadius(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._14sdp))
+                .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen.circle_radius))
                 .selectedStepNumberColor(ContextCompat.getColor(this, R.color.white))
                 .steps(new ArrayList<String>() {{
                     add("General Info");
@@ -165,9 +161,9 @@ public class PersonalInfoActivity extends AppCompatActivity implements FragmentT
                 }})
                 .stepsNumber(3)
                 .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
-                .stepLineWidth(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._1sdp))
-                .textSize(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._16sdp))
-                .stepNumberTextSize(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._16sdp))
+                .stepLineWidth(getResources().getDimensionPixelSize(R.dimen.line_width))
+                .textSize(getResources().getDimensionPixelSize(R.dimen.text_size))
+                .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen.text_size))
                 .typeface(ResourcesCompat.getFont(getApplicationContext(), R.font.sf_ui_display))
                 .commit();
 

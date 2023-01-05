@@ -27,6 +27,7 @@ import com.app.bgodriver.adapter.VehicleFragmentAdapter;
 import com.app.bgodriver.databinding.ActivityVehicleInfoBinding;
 import com.app.bgodriver.utilites.PreferenceManager;
 import com.app.bgodriver.view.HomeActivity;
+import com.intuit.ssp.BuildConfig;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class VehicleInfoActivity extends AppCompatActivity {
                 .selectedTextColor(ContextCompat.getColor(this, R.color.bGo_textColorPrimary))
                 .animationType(StepView.ANIMATION_CIRCLE)
                 .selectedCircleColor(ContextCompat.getColor(this, R.color.bGo_mainColor))
-                .selectedCircleRadius(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._14sdp))
+                .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen.circle_radius))
                 .selectedStepNumberColor(ContextCompat.getColor(this, R.color.white))
                 .steps(new ArrayList<String>() {{
                     add("General Info");
@@ -64,9 +65,9 @@ public class VehicleInfoActivity extends AppCompatActivity {
                 }})
                 .stepsNumber(3)
                 .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
-                .stepLineWidth(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._1sdp))
-                .textSize(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._16sdp))
-                .stepNumberTextSize(getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._16sdp))
+                .stepLineWidth(getResources().getDimensionPixelSize(R.dimen.line_width))
+                .textSize(getResources().getDimensionPixelSize(R.dimen.text_size))
+                .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen.text_size))
                 .typeface(ResourcesCompat.getFont(getApplicationContext(), R.font.sf_ui_display))
                 .commit();
 

@@ -50,11 +50,19 @@ public class BiddingDetails extends AppCompatActivity  {
         binding.biddingBack.setOnClickListener(v -> {
             onBackPressed();
         });
+
         binding.tripConfirmButton.setOnClickListener(v -> {
-            Intent intent=new Intent(getApplicationContext(),TripDetails.class);
-            intent.putExtra("vOne",destinationLocation);
-            intent.putExtra("vTwo",currentLocation);
-            startActivity(intent);
+           if(binding.filledExposed.getText().toString().isEmpty())
+           {
+               Toast.makeText(getApplicationContext(),"Select",Toast.LENGTH_SHORT).show();
+           }else {
+               Intent intent=new Intent(getApplicationContext(),TripDetails.class);
+               intent.putExtra("vOne",destinationLocation);
+               intent.putExtra("vTwo",currentLocation);
+               startActivity(intent);
+           }
+
+
         });
     }
 
@@ -67,6 +75,7 @@ public class BiddingDetails extends AppCompatActivity  {
         );
         binding.filledExposed.setAdapter(arrayAdapter);
         binding.filledExposed.setOnItemClickListener((parent, view, position, id) -> {
+
             Toast.makeText(getApplicationContext(),binding.filledExposed.getText().toString(),Toast.LENGTH_SHORT).show();
         });
     }
@@ -84,6 +93,7 @@ public class BiddingDetails extends AppCompatActivity  {
         binding.myVehicleRecycler.setAdapter(adapter);
 
     }
+
 
     private void setBiddingData() {
 
